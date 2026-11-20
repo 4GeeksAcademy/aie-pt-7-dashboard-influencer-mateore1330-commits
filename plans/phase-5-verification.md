@@ -26,7 +26,7 @@ git checkout -b chore/phase-5-verification
 
 | # | Comprobación | Cómo |
 |---|---|---|
-| 1 | HTML válido | Validador Nu de W3C: 0 errores |
+| 1 | HTML válido | Validador Nu de W3C: 0 errores, salvo los 2 del bloque `@theme` que exige Tailwind v4; sin ese bloque, 0 mensajes |
 | 2 | Semántica y jerarquía | Esquema de títulos y landmarks (lista en `verification.md`) |
 | 3 | Solo Tailwind | `grep` sin resultados: `style=`, `cdn.tailwindcss.com`, `@apply`, `@tailwind`, `tailwind.config`, `<script` (aparte del CDN), `on[a-z]*=`, archivos `.css` propios. El `<style>` solo contiene `@theme` |
 | 4 | Colores del tema | `grep` sin colores de la paleta por defecto ni `[#…]` |

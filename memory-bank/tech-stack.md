@@ -1,7 +1,7 @@
 ---
 name: tech-stack
 description: Tecnologías del dashboard (HTML, Tailwind v4 por CDN, Charts.css, Geist), cómo previsualizarlo y herramientas de trabajo y validación
-last_verified: 2026-11-20 (sobre el commit 40d7539, cierre de la fase 1)
+last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
 ---
 
 # Stack tecnológico
@@ -39,6 +39,6 @@ El `server.py` de la plantilla también vale, pero necesita Flask (`pip3 install
 | `gh` | Abrir PR | `/opt/homebrew/bin/gh` |
 | `python3 -m http.server` | Vista previa en local | Incluido en macOS |
 | Playwright (skill `rx-test-web`) | Capturas a 375, 768, 1024 y 1440 px, `scrollWidth`, menú y filtros | MCP de Playwright |
-| Validador Nu de W3C | HTML válido (0 errores) | https://validator.w3.org/nu/ |
+| Validador Nu de W3C | HTML válido (0 errores, salvo los 2 del bloque `@theme`; ver HT-02) | https://validator.w3.org/nu/ |
 | Lighthouse | Accesibilidad (objetivo 100) en la fase 5 | DevTools del navegador |
 | Skill `accessibility` | Auditoría WCAG 2.2 | [`.agents/skills/accessibility/`](../.agents/skills/accessibility/SKILL.md) |

@@ -77,8 +77,8 @@ Si algo no está en estos documentos, **se pregunta a Mateo**. No se inventa.
 | Fase | Archivo | Rama | Resultado | Estado |
 |---|---|---|---|---|
 | 0 | [`plans/phase-0-setup.md`](plans/phase-0-setup.md) | `chore/phase-0-setup` | `.gitignore`, hook de gitleaks, documentos, maqueta y plan versionados | Hecha |
-| 1 | [`plans/phase-1-agent-harness.md`](plans/phase-1-agent-harness.md) | `docs/phase-1-agent-harness` | `AGENTS.md`, `CLAUDE.md`, reglas, memory bank y skill | En revisión |
-| 2 | [`plans/phase-2-html.md`](plans/phase-2-html.md) | `feat/phase-2-html` | `index.html` semántico completo, con todos los textos, tablas y gráficos | Pendiente |
+| 1 | [`plans/phase-1-agent-harness.md`](plans/phase-1-agent-harness.md) | `docs/phase-1-agent-harness` | `AGENTS.md`, `CLAUDE.md`, reglas, memory bank y skill | Hecha |
+| 2 | [`plans/phase-2-html.md`](plans/phase-2-html.md) | `feat/phase-2-html` | `index.html` semántico completo, con todos los textos, tablas y gráficos | En revisión |
 | 3 | [`plans/phase-3-tailwind.md`](plans/phase-3-tailwind.md) | `feat/phase-3-tailwind` | Todo el estilo con Tailwind, mobile-first, con sidebar desde `md` | Pendiente |
 | 4 | [`plans/phase-4-menu-filters.md`](plans/phase-4-menu-filters.md) | `feat/phase-4-menu-filters` | Menú hamburguesa con `:target`, filtros de los rankings y foco visible | Pendiente |
 | 5 | [`plans/phase-5-verification.md`](plans/phase-5-verification.md) | `chore/phase-5-verification` | Verificación completa, `verification.md` y README de entrega | Pendiente |
@@ -96,7 +96,7 @@ construye y cómo se comprueba al final (fase 5).
 
 | # | Criterio | Fase | Cómo se comprueba |
 |---|---|---|---|
-| 1 | **HTML semántico:** etiquetas estructurales y landmarks correctos, jerarquía clara | 2 | Validador Nu de W3C con 0 errores. `header`, `nav`, `main`, `section` con `aria-labelledby`, `article`, `table` con `caption` y `th scope`, `footer`. Un `h1`, un `h2` por bloque y `h3` por tarjeta, sin saltos |
+| 1 | **HTML semántico:** etiquetas estructurales y landmarks correctos, jerarquía clara | 2 | Validador Nu de W3C con 0 errores, salvo los 2 del bloque `@theme` que exige Tailwind v4 (`type="text/tailwindcss"` y `@theme`, aceptados por Mateo el 20-11-2026). `header`, `nav`, `main`, `section` con `aria-labelledby`, `article`, `table` con `caption` y `th scope`, `footer`. Un `h1`, un `h2` por bloque y `h3` por tarjeta, sin saltos |
 | 2 | **Tailwind CSS:** solo clases utility, sin CSS propio, buen uso de breakpoints y de flex/grid | 3 y 4 | Búsqueda en el repo: 0 `style=""`, 0 archivos `.css` propios, 0 reglas en `<style>` aparte de `@theme`, 0 apariciones de `cdn.tailwindcss.com`, `@apply`, `@tailwind` o `tailwind.config`. Breakpoints `sm`, `md`, `lg` y `xl` en uso |
 | 3 | **Layout y componentes:** los 3 bloques bien separados, jerarquía visual coherente, componentes reutilizables | 2 y 3 | Al menos **3 KPIs** (hay 5), **3 drivers** (hay 5) y **tablas o listados** (3 tablas, alertas y rankings). Todas las tarjetas comparten la misma base de clases (`DESIGN.md` §6). Mateo lo compara con la maqueta |
 | 4 | **Diseño responsivo:** funciona en móvil, tablet y escritorio, mobile-first, sin scroll horizontal | 3 y 4 | Capturas a 375, 768, 1024 y 1440 px. A esos 4 anchos, `scrollWidth` igual a `clientWidth`. Menú hamburguesa por debajo de `md` y sidebar desde `md` |

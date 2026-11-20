@@ -1,7 +1,7 @@
 ---
 name: current-state
 description: Qué hay hoy en el repositorio, qué falta, cuál es la siguiente fase y qué decisiones siguen abiertas
-last_verified: 2026-11-20 (sobre el commit 40d7539, cierre de la fase 1)
+last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
 ---
 
 # Estado actual
@@ -14,8 +14,9 @@ last_verified: 2026-11-20 (sobre el commit 40d7539, cierre de la fase 1)
 | Fase | Estado |
 |---|---|
 | 0 — Preparación del repositorio | Hecha (PR #1 fusionado) |
-| 1 — Archivos para el agente | En revisión (rama `docs/phase-1-agent-harness`, PR a `main` sin fusionar) |
-| 2 a 5 | Pendientes |
+| 1 — Archivos para el agente | Hecha (PR #2 fusionado) |
+| 2 — HTML semántico completo | En revisión (rama `feat/phase-2-html`, PR a `main` sin fusionar) |
+| 3 a 5 | Pendientes |
 
 La tabla que manda es la de [`PLAN.md`](../PLAN.md) §4; lo que decide si una fase está terminada
 es la fusión en `main`.
@@ -26,17 +27,21 @@ es la fusión en `main`.
   `PLAN.md` con `plans/`.
 - `.gitignore` y hook de gitleaks (`.githooks/pre-commit`).
 - Reglas, skill `accessibility`, memory bank, `AGENTS.md` y `CLAUDE.md` (fase 1).
+- `index.html` completo **sin maquetar** (fase 2): `<head>` con Tailwind, `@theme`, fuentes y
+  Charts.css; landmarks; los 3 bloques con 5 KPIs, 5 drivers (3 gráficos de Charts.css), alertas,
+  3 tablas y 4 rankings. Las únicas clases son `sr-only`, `group`, las de Charts.css y `[--size:…]`.
 
 ## Qué falta
 
-- `index.html`: no existe todavía.
+- El estilo con Tailwind (fase 3), y el menú y los filtros funcionando (fase 4). Hasta entonces el
+  panel `#menu` y las 4 listas de los rankings se ven siempre.
 - `verification.md` y el README de entrega (fase 5).
 
 ## Siguiente fase
 
-**Fase 2 — HTML semántico completo** ([`plans/phase-2-html.md`](../plans/phase-2-html.md)), rama
-`feat/phase-2-html`. Solo se empieza cuando el PR de la fase 1 esté fusionado en `main` y Mateo
-haya dicho "sí" al resumen del plan.
+**Fase 3 — Estilo con Tailwind, mobile-first** ([`plans/phase-3-tailwind.md`](../plans/phase-3-tailwind.md)),
+rama `feat/phase-3-tailwind`. Solo se empieza cuando el PR de la fase 2 esté fusionado en `main` y
+Mateo haya dicho "sí" al resumen del plan.
 
 ## Decisiones abiertas (`PLAN.md` §7)
 
