@@ -102,7 +102,7 @@ Commit: `feat: add operational detail block with tables, alerts and rankings`
 
 ### Paso 7 — Validar
 
-- Validador Nu de W3C (https://validator.w3.org/nu/): **0 errores**.
+- Validador Nu de W3C (https://validator.w3.org/nu/): **0 errores**, salvo los 2 del bloque `@theme` que exige Tailwind v4 (`type="text/tailwindcss"` y `@theme`, aceptados por Mateo el 20-11-2026). Para comprobar que no hay más, valida también una copia sin ese bloque: debe dar 0 mensajes.
 - Esquema de títulos: un `h1`, tres `h2` y `h3` por tarjeta, sin saltos.
 - Comparar cada texto y cada cifra con `CONTENT.md` (pega en el PR la lista revisada).
 - `grep` sin resultados para `style=`, `cdn.tailwindcss.com`, `@apply`, `@tailwind`,
@@ -122,7 +122,7 @@ gh pr create --base main --title "feat: phase 2 – semantic html" --body "<resu
 
 ## Criterios de aceptación
 
-- [ ] Validador Nu con 0 errores (captura o enlace en el PR).
+- [ ] Validador Nu con 0 errores, salvo los 2 del bloque `@theme` (resultado en el PR).
 - [ ] Landmarks: `aside` + `nav`, `header`, `main`, 3 `section` con `aria-labelledby`, `footer`.
 - [ ] 5 KPIs, 5 drivers (embudo, plataforma, producto, engagement, actividad) y detalle con 3
       tablas, alertas y 4 rankings.

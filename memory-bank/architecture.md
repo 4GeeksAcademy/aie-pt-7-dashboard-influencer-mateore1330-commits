@@ -1,13 +1,13 @@
 ---
 name: architecture
 description: Estructura prevista del repositorio y de index.html — landmarks, los 3 bloques con sus tarjetas, anclas y breakpoints
-last_verified: 2026-11-20 (sobre el commit 40d7539, cierre de la fase 1)
+last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
 ---
 
 # Arquitectura
 
-> Describe la estructura **prevista** por `PLAN.md` y `DESIGN.md` §4–5. A 20-11-2026 todavía no
-> existe `index.html`: se escribe en la fase 2 (ver [`current-state.md`](current-state.md)).
+> Describe la estructura de `PLAN.md` y `DESIGN.md` §4–5. A 20-11-2026 `index.html` tiene toda la
+> estructura y el contenido (fase 2), todavía sin maquetar (ver [`current-state.md`](current-state.md)).
 
 ## Estructura de archivos
 
@@ -40,7 +40,7 @@ No hay archivos `.css` ni `.js` propios (regla [HT-01](../.agents/rules/html.md)
 | 4a | Cabecera del panel | `h1` "Hola, Lucía", subtítulo y periodo | Todos |
 | 4b | Bloque 1 · Resumen | `<section id="resumen">`: 5 KPIs (`<article>`) | Todos |
 | 4c | Bloque 2 · Drivers | `<section id="plataformas">`: embudo, plataforma, producto (`#productos`), engagement y actividad | Todos |
-| 4d | Bloque 3 · Detalle | `<section>`: alertas (`#alertas`), tabla de plataformas, campañas (`#campanas`), productos y rankings | Todos |
+| 4d | Bloque 3 · Detalle | `<section aria-labelledby="detalle-titulo">`: alertas (`#alertas`), tabla de plataformas, campañas (`#campanas`) y productos (los dos en un mismo `div`, para ponerlos lado a lado en `xl`) y rankings | Todos |
 | 5 | Pie | `<footer>` | Todos |
 
 Anclas fijas: regla [HT-04](../.agents/rules/html.md). Las anclas llevan `scroll-mt-*` para que la

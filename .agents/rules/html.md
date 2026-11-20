@@ -58,7 +58,7 @@ correctos") y `DESIGN.md` §4 (landmarks). La estructura detallada está en
 
 **❌ Evita:** `<div class="kpi">` para un KPI, o un bloque sin `aria-labelledby`.
 
-**Cómo comprobarlo:** el validador Nu de W3C (https://validator.w3.org/nu/) da 0 errores, y
+**Cómo comprobarlo:** el validador Nu de W3C (https://validator.w3.org/nu/) da 0 errores, salvo los 2 que provoca el bloque `@theme` de [TW-03](tailwind.md) («The only allowed value for the "type" attribute…» y «Unrecognized at-rule "@theme"»): los exige Tailwind v4 por CDN y Mateo los aceptó el 20-11-2026. Una copia sin ese bloque da 0 mensajes. Además,
 `grep -c "<section" index.html` devuelve 3.
 
 ## HT-03 · Jerarquía de títulos: un `h1`, un `h2` por bloque, `h3` por tarjeta, sin saltos
