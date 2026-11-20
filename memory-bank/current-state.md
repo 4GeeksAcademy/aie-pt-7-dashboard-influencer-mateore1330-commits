@@ -17,7 +17,7 @@ last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
 | 1 — Archivos para el agente | Hecha (PR #2 fusionado) |
 | 2 — HTML semántico completo | Hecha (PR #3 fusionado) |
 | 3 — Estilo con Tailwind | Hecha (PR #4 fusionado) |
-| 4 — Menú, filtros y foco | En revisión (rama `feat/phase-4-menu-filters`, PR a `main` sin fusionar) |
+| 4 — Menú, filtros y foco | Fusionada (PR #5). Sus arreglos de KPIs, tablas y márgenes, en revisión en la rama `fix/phase-4-layout` (PR a `main` sin fusionar) |
 | 5 | Pendiente |
 
 La tabla que manda es la de [`PLAN.md`](../PLAN.md) §4; lo que decide si una fase está terminada
