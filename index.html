@@ -42,7 +42,7 @@
   </style>
 </head>
 <body class="bg-fondo font-sans text-tinta antialiased has-[#menu:target]:overflow-hidden md:has-[#menu:target]:overflow-visible">
-  <a href="#contenido" class="sr-only">Saltar al contenido</a>
+  <a href="#contenido" class="[body:has(#menu:target)_&]:invisible sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-morado-500 focus:px-4 focus:py-3 focus:font-semibold focus:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-morado-500">Saltar al contenido</a>
 
   <div class="md:flex">
     <aside class="hidden md:sticky md:top-0 md:flex md:h-dvh md:w-56 md:shrink-0 md:flex-col md:gap-8 md:overflow-y-auto md:border-r md:border-linea md:bg-superficie md:px-5 md:py-7">
@@ -55,22 +55,22 @@
       </p>
       <nav aria-label="Secciones del panel">
         <ul class="flex flex-col gap-0.5">
-          <li><a href="#resumen" class="flex min-h-11 items-center gap-2.5 rounded-xl bg-lavanda-100 px-3.5 font-semibold text-morado-900"><span aria-hidden="true" class="size-1.5 shrink-0 rounded-full bg-morado-500"></span>Resumen</a></li>
-          <li><a href="#plataformas" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta">Plataformas</a></li>
-          <li><a href="#productos" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta">Productos</a></li>
-          <li><a href="#campanas" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta">Campañas</a></li>
-          <li><a href="#alertas" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta">Alertas</a></li>
+          <li><a href="#resumen" class="flex min-h-11 items-center gap-2.5 rounded-xl bg-lavanda-100 px-3.5 font-semibold text-morado-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-morado-500"><span aria-hidden="true" class="size-1.5 shrink-0 rounded-full bg-morado-500"></span>Resumen</a></li>
+          <li><a href="#plataformas" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-morado-500">Plataformas</a></li>
+          <li><a href="#productos" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-morado-500">Productos</a></li>
+          <li><a href="#campanas" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-morado-500">Campañas</a></li>
+          <li><a href="#alertas" class="flex min-h-11 items-center gap-2.5 rounded-xl px-3.5 pl-7.5 text-gris hover:bg-lavanda-50 hover:text-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-morado-500">Alertas</a></li>
         </ul>
       </nav>
     </aside>
 
     <div class="min-w-0 flex-1">
       <header id="cabecera" class="fixed inset-x-0 top-0 z-40 flex h-16 items-center justify-between border-b border-linea bg-superficie px-4 sm:px-6 md:hidden">
-        <p class="flex items-center gap-2.5">
+        <p class="flex items-center gap-2.5 [body:has(#menu:target)_&]:invisible">
           <span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-lg bg-morado-500 font-mono text-sm font-semibold text-white">LV</span>
           <span class="font-semibold">Lucía Vega</span>
         </p>
-        <a href="#menu" class="inline-flex min-h-11 items-center gap-2 rounded-lg border border-linea px-3.5 text-sm font-semibold">
+        <a href="#menu" class="[body:has(#menu:target)_&]:invisible inline-flex min-h-11 items-center gap-2 rounded-lg border border-linea px-3.5 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-morado-500">
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <path d="M4 7h16M4 12h16M4 17h16"/>
           </svg>
@@ -80,18 +80,18 @@
         <div id="menu" class="fixed inset-0 z-50 hidden flex-col overflow-y-auto bg-morado-900 px-4 text-white target:flex sm:px-6">
           <div class="flex h-16 shrink-0 items-center justify-between">
             <span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-lg bg-white font-mono text-sm font-semibold text-morado-900">LV</span>
-            <a href="#cabecera" aria-label="Cerrar menú" class="inline-flex min-h-11 items-center gap-2 rounded-lg bg-rosa-500 px-3.5 text-sm font-semibold text-tinta">
+            <a href="#cabecera" aria-label="Cerrar menú" class="inline-flex min-h-11 items-center gap-2 rounded-lg bg-rosa-500 px-3.5 text-sm font-semibold text-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
               <span aria-hidden="true">✕</span>
               Cerrar
             </a>
           </div>
           <nav aria-label="Secciones del panel" class="mt-6 flex-1">
             <ul class="border-t border-morado-800">
-              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#resumen"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">01 /</span> Resumen <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
-              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#plataformas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">02 /</span> Plataformas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
-              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#productos"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">03 /</span> Productos <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
-              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#campanas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">04 /</span> Campañas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
-              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#alertas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">05 /</span> Alertas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" href="#resumen"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">01 /</span> Resumen <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" href="#plataformas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">02 /</span> Plataformas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" href="#productos"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">03 /</span> Productos <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" href="#campanas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">04 /</span> Campañas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" href="#alertas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">05 /</span> Alertas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
             </ul>
           </nav>
           <p class="py-6 text-sm">
@@ -100,7 +100,7 @@
         </div>
       </header>
 
-      <main id="contenido" class="flex scroll-mt-20 flex-col gap-10 px-4 pt-24 pb-14 sm:px-6 md:scroll-mt-8 md:px-8 md:pt-8">
+      <main id="contenido" class="[body:has(#menu:target)_&]:invisible md:[body:has(#menu:target)_&]:visible flex scroll-mt-20 flex-col gap-10 px-4 pt-24 pb-14 sm:px-6 md:scroll-mt-8 md:px-8 md:pt-8">
         <div class="flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:justify-between">
           <div>
             <h1 class="text-3xl font-semibold tracking-tight md:text-4xl">Hola, Lucía</h1>
@@ -287,7 +287,7 @@
                 <h3 id="engagement-titulo" class="text-lg font-semibold">Engagement por plataforma</h3>
                 <p class="mt-1 text-sm text-gris">Cómo responde tu comunidad</p>
               </div>
-              <div class="-mx-6 overflow-x-auto px-6">
+              <div class="-mx-6 overflow-x-auto px-6 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-morado-500">
                 <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                   <caption class="sr-only">Engagement por plataforma</caption>
                   <thead>
@@ -368,7 +368,7 @@
 
           <article aria-labelledby="tabla-plataformas-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
             <h3 id="tabla-plataformas-titulo" class="text-lg font-semibold">Plataformas</h3>
-            <div class="-mx-6 overflow-x-auto px-6">
+            <div class="-mx-6 overflow-x-auto px-6 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-morado-500">
               <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                 <caption class="sr-only">Plataformas</caption>
                 <thead>
@@ -431,7 +431,7 @@
           <div class="grid gap-4 xl:grid-cols-2">
             <article id="campanas" aria-labelledby="campanas-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5 scroll-mt-20 md:scroll-mt-8">
               <h3 id="campanas-titulo" class="text-lg font-semibold">Campañas de octubre</h3>
-              <div class="-mx-6 overflow-x-auto px-6">
+              <div class="-mx-6 overflow-x-auto px-6 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-morado-500">
                 <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                   <caption class="sr-only">Campañas de octubre</caption>
                   <thead>
@@ -490,7 +490,7 @@
 
             <article aria-labelledby="tabla-productos-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
               <h3 id="tabla-productos-titulo" class="text-lg font-semibold">Productos</h3>
-              <div class="-mx-6 overflow-x-auto px-6">
+              <div class="-mx-6 overflow-x-auto px-6 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-morado-500">
                 <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                   <caption class="sr-only">Productos</caption>
                   <thead>
@@ -570,7 +570,7 @@
         </section>
       </main>
 
-      <footer class="border-t border-linea px-4 py-8 sm:px-6 md:px-8">
+      <footer class="[body:has(#menu:target)_&]:invisible md:[body:has(#menu:target)_&]:visible border-t border-linea px-4 py-8 sm:px-6 md:px-8">
         <p class="text-xs text-gris">Datos de ejemplo · Proyecto de 4Geeks Academy</p>
       </footer>
     </div>
