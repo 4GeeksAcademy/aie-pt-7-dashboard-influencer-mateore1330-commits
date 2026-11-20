@@ -1,7 +1,7 @@
 ---
 name: current-state
 description: Qué hay hoy en el repositorio, qué falta, cuál es la siguiente fase y qué decisiones siguen abiertas
-last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
+last_verified: 2026-11-20 (sobre el commit e76d619, cierre de la fase 3)
 ---
 
 # Estado actual
@@ -15,8 +15,9 @@ last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
 |---|---|
 | 0 — Preparación del repositorio | Hecha (PR #1 fusionado) |
 | 1 — Archivos para el agente | Hecha (PR #2 fusionado) |
-| 2 — HTML semántico completo | En revisión (rama `feat/phase-2-html`, PR a `main` sin fusionar) |
-| 3 a 5 | Pendientes |
+| 2 — HTML semántico completo | Hecha (PR #3 fusionado) |
+| 3 — Estilo con Tailwind | En revisión (rama `feat/phase-3-tailwind`, PR a `main` sin fusionar) |
+| 4 y 5 | Pendientes |
 
 La tabla que manda es la de [`PLAN.md`](../PLAN.md) §4; lo que decide si una fase está terminada
 es la fusión en `main`.
@@ -27,21 +28,21 @@ es la fusión en `main`.
   `PLAN.md` con `plans/`.
 - `.gitignore` y hook de gitleaks (`.githooks/pre-commit`).
 - Reglas, skill `accessibility`, memory bank, `AGENTS.md` y `CLAUDE.md` (fase 1).
-- `index.html` completo **sin maquetar** (fase 2): `<head>` con Tailwind, `@theme`, fuentes y
-  Charts.css; landmarks; los 3 bloques con 5 KPIs, 5 drivers (3 gráficos de Charts.css), alertas,
-  3 tablas y 4 rankings. Las únicas clases son `sr-only`, `group`, las de Charts.css y `[--size:…]`.
+- `index.html` completo (fase 2) y con todo el estilo de Tailwind (fase 3), mobile-first, sin
+  scroll horizontal. Capturas en `design/screenshots/fase-3/`.
 
 ## Qué falta
 
-- El estilo con Tailwind (fase 3), y el menú y los filtros funcionando (fase 4). Hasta entonces el
-  panel `#menu` y las 4 listas de los rankings se ven siempre.
+- El menú y los filtros funcionando, el foco visible y el estilo de "Saltar al contenido"
+  (fase 4). Hasta entonces el panel `#menu` está siempre oculto (`hidden`) y las 4 listas de los
+  rankings se ven a la vez.
 - `verification.md` y el README de entrega (fase 5).
 
 ## Siguiente fase
 
-**Fase 3 — Estilo con Tailwind, mobile-first** ([`plans/phase-3-tailwind.md`](../plans/phase-3-tailwind.md)),
-rama `feat/phase-3-tailwind`. Solo se empieza cuando el PR de la fase 2 esté fusionado en `main` y
-Mateo haya dicho "sí" al resumen del plan.
+**Fase 4 — Menú hamburguesa, filtros y foco** ([`plans/phase-4-menu-filters.md`](../plans/phase-4-menu-filters.md)),
+rama `feat/phase-4-menu-filters`. Solo se empieza cuando el PR de la fase 3 esté fusionado en `main`
+y Mateo haya dicho "sí" al resumen del plan.
 
 ## Decisiones abiertas (`PLAN.md` §7)
 
@@ -56,4 +57,7 @@ Se preguntan a Mateo cuando toque, con un cuestionario:
 ## Pendiente para la fase 4
 
 - Comprobar cuál gana entre `md:hidden` y `target:flex` en el panel `#menu`, y usar
-  `md:target:hidden` si hace falta (`plans/phase-4-menu-filters.md` paso 2).
+  `md:target:hidden` si hace falta (`plans/phase-4-menu-filters.md` paso 2). Lo previsto: gana
+  `target:flex`, porque `:target` suma especificidad.
+- Las 4 listas de los rankings tienen hoy las mismas clases; en la fase 4 se añaden `hidden` y
+  `group-has-[#r-…:checked]:block`, y `has-checked:` a los filtros.

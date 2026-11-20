@@ -1,7 +1,7 @@
 ---
 name: progress
 description: Registro por fase — qué se hizo, decisiones, problemas y cómo se verificó
-last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
+last_verified: 2026-11-20 (sobre el commit e76d619, cierre de la fase 3)
 ---
 
 # Progreso
@@ -66,7 +66,7 @@ las 4 preguntas, citando la fuente de cada respuesta:
 - El choque entre `md:hidden` y `target:flex` sigue abierto a propósito: se resuelve en la fase 4
   (anotado en `current-state.md`).
 
-## Fase 2 — HTML semántico completo (en revisión)
+## Fase 2 — HTML semántico completo (PR #3, fusionado el 20-11-2026)
 
 **Qué se hizo:** `index.html` completo y sin maquetar, en 5 commits (uno por paso): `<head>`,
 esqueleto y navegación, bloque 1 (5 KPIs), bloque 2 (embudo, plataforma y reparto por producto con
@@ -101,3 +101,49 @@ plataformas, campañas y productos, y rankings con `fieldset` y 4 radios).
   literales.
 - `grep`: 0 `style="`, 0 `cdn.tailwindcss.com`, `@apply`, `@tailwind`, `tailwind.config`, `on*=`;
   un solo `<script>` (el CDN) y un solo `<style>`.
+
+## Fase 3 — Estilo con Tailwind, mobile-first (en revisión)
+
+**Qué se hizo:** todo el estilo de `index.html` con clases de Tailwind v4, en 6 commits: estructura
+(sidebar fija desde `md`, barra superior fija en móvil, `scroll-mt-*` en las anclas), componentes
+base, franja de KPIs, drivers con los gráficos, bloque de detalle y un `fix:` de las tarjetas de
+producto. El panel `#menu` queda con `hidden` y las 4 listas de los rankings se ven todas (fase 4).
+
+**Problemas y cómo se resolvieron:**
+
+- **Charts.css gana a Tailwind:** Charts.css no va en ninguna capa y Tailwind v4 pone sus
+  utilidades en `@layer utilities`, así que en la misma propiedad del mismo elemento siempre gana
+  Charts.css. Por eso:
+  - El relleno de las cifras de las barras va en `<span class="data">`, no en el `<td>`.
+  - La pista `lavanda-50` de las barras de plataforma necesita `[&_tr]:bg-lavanda-50!`. Es el
+    único `!` del archivo.
+  - Queda escrito en CH-02.
+- **Altura de los gráficos:**
+  - En `column` la da `aspect-ratio: 21/9` sobre el `<tbody>`, y el sitio de las etiquetas
+    lo reserva Charts.css con el margen inferior de cada fila.
+  - En `bar` hace falta `h-full` en el `<tbody>`; si no, las barras no llenan el contenedor.
+- **Etiquetas del embudo en móvil:** "Interacciones" se partía por cualquier letra (Charts.css
+  pone `overflow-wrap: anywhere` en la fila). Se arregla con `break-normal hyphens-auto` en los
+  `th`: "Interac-ciones".
+- **Cifras del embudo en móvil:** se juntaban; pasan a `text-xs` en la base y a `text-sm` desde `sm`.
+- **Tarjetas de producto a 768 y 1280 px:** "1.350 €" se partía. La lista de datos va en una
+  columna desde `sm` y con `whitespace-nowrap`.
+- **Barras de plataforma:** la cifra va dentro de la barra, en dos líneas (comisión y ROI), con
+  la etiqueta de la red a la izquierda. Es una diferencia aceptada por `DESIGN.md` §8 respecto a la
+  maqueta (que pone la cifra encima).
+- **Comprobación de TW-01:** el patrón `@tailwind` encontraba el propio CDN
+  (`@tailwindcss/browser`). Se cambia a `@tailwind[[:space:]]`.
+- **Vista previa:** el puerto 8000 lo usa Docker en el equipo de Mateo; se usa el 8080.
+
+**Verificación (Playwright):**
+
+- Capturas de página completa a 375, 768, 1024 y 1440 px en `design/screenshots/fase-3/`.
+- `scrollWidth === clientWidth` a 375, 768, 1024, 1280 y 1440 px.
+- Sidebar visible desde 768 px; por debajo, la barra superior con "Menú".
+- Contraste de todo el texto visible, con la fórmula de WCAG: el par más bajo es `rosa-700` sobre
+  `rosa-50` (5,05:1). Las 4 cifras del embudo dentro de las columnas dan menos, pero están ocultas a
+  la vista con `hide-data` (recortadas a 1×1 px, solo para el lector de pantalla).
+- `grep`: 0 `style="`, 0 `[#…]`, 0 colores de la paleta por defecto, 0 `px` arbitrarios,
+  0 `text-rosa-500`, 0 sintaxis de v3. Breakpoints en uso: `sm` (19), `md` (31), `lg` (4),
+  `xl` (10). Las 8 tarjetas comparten la base de TW-06.
+

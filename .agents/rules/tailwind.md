@@ -38,7 +38,7 @@ Charts.css, `plans/phase-2-html.md` paso 2).
 **Cómo comprobarlo:**
 
 ```bash
-grep -rnE "cdn\.tailwindcss\.com|tailwind\.config|@tailwind|@apply|@layer|@config" --exclude-dir=.git --exclude-dir=design --exclude="*.md" .   # sin resultados
+grep -rnE "cdn\.tailwindcss\.com|tailwind\.config|@tailwind[[:space:]]|@apply|@layer|@config" --exclude-dir=.git --exclude-dir=design --exclude="*.md" .   # sin resultados
 ```
 
 ## TW-02 · Sin CSS propio, sin `style=""` y sin JavaScript propio

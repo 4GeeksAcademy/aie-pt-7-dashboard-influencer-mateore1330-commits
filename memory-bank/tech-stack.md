@@ -1,7 +1,7 @@
 ---
 name: tech-stack
 description: Tecnologías del dashboard (HTML, Tailwind v4 por CDN, Charts.css, Geist), cómo previsualizarlo y herramientas de trabajo y validación
-last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
+last_verified: 2026-11-20 (sobre el commit e76d619, cierre de la fase 3)
 ---
 
 # Stack tecnológico
@@ -26,8 +26,11 @@ CDN.
 python3 -m http.server 8000     # en la raíz; abrir http://localhost:8000
 ```
 
-Se abre en **Brave**, el navegador de Mateo. Si el puerto 8000 está ocupado, usa otro:
-`python3 -m http.server 8080 --bind 127.0.0.1`.
+Se abre en **Brave**, el navegador de Mateo. En su equipo el puerto 8000 lo usa Docker, así que
+se usa otro: `python3 -m http.server 8080 --bind 127.0.0.1`.
+
+Con Playwright, para ver un cambio hay que **recargar de verdad** (`?v=N` en la URL): navegar
+solo a un ancla (`#campanas`) no recarga la página.
 
 El `server.py` de la plantilla también vale, pero necesita Flask (`pip3 install flask`).
 
