@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>2b · Móvil, menú cerrado</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1D1B2C}a:hover{color:#5B2FD6}
+</style>
+</helmet>
+<div style="width: 390px; height: 1500px; overflow: hidden; position: relative; background: #F8F7FB; color: #1D1B2C; font-family: Geist, system-ui, sans-serif">
+
+  <header style="position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; background: #FFFFFF; border-bottom: 1px solid #E7E3F3">
+    <a href="#resumen" style="display: flex; align-items: center; gap: 10px; text-decoration: none">
+      <span style="width: 36px; height: 36px; border-radius: 9px; background: #673DE6; color: #FFFFFF; display: grid; place-items: center; font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 14px">LV</span>
+      <span style="font-weight: 600; font-size: 16px">Lucía Vega</span>
+    </a>
+    <button type="button" onClick="{{openMenu}}" aria-label="Abrir menú" style="min-height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-radius: 10px; border: 1px solid #E7E3F3; background: #FFFFFF; color: #1D1B2C; font: 600 14px Geist, sans-serif; cursor: pointer">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      Menú
+    </button>
+  </header>
+
+  <main id="resumen" style="padding: 20px 16px 40px; display: flex; flex-direction: column; gap: 28px">
+    <div>
+      <h1 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Hola, Lucía</h1>
+      <p style="margin: 6px 0 0; color: #5F5A73; font-size: 15px">Así han ido tus redes en octubre de 2026</p>
+      <span style="display: inline-block; margin-top: 12px; padding: 8px 12px; border-radius: 10px; background: #FFFFFF; border: 1px solid #E7E3F3; font-family: 'Geist Mono', monospace; font-size: 12px; color: #3E3A52">1–31 oct 2026 · vs septiembre</span>
+    </div>
+
+    <section aria-labelledby="m-resumen" style="display: flex; flex-direction: column; gap: 12px">
+      <h2 id="m-resumen" style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: #5F5A73">01 · Resumen del mes</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #E7E3F3; border: 1px solid #E7E3F3; border-radius: 18px; overflow: hidden">
+        <article style="grid-column: 1 / -1; background: #673DE6; color: #FFFFFF; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+          <h3 style="margin: 0; font-size: 14px; font-weight: 600">Comisiones</h3>
+          <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 40px; font-weight: 600; letter-spacing: -0.04em">3.840 €</p>
+          <p style="margin: 0; font-size: 13px"><span style="padding: 2px 8px; border-radius: 999px; background: #FC5185; color: #1D1B2C; font-weight: 700">▲ +12 %</span> de 25.600 € vendidos</p>
+        </article>
+        <article style="background: #FFFFFF; padding: 16px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 13px; font-weight: 500; color: #5F5A73">Ventas</h3><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 600">355</p><p style="margin: 0; font-size: 12px; color: #5F5A73"><strong style="color: #5B2FD6">▲ +8 %</strong></p></article>
+        <article style="background: #FFFFFF; padding: 16px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 13px; font-weight: 500; color: #5F5A73">Conversión</h3><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 600">1,61 %</p><p style="margin: 0; font-size: 12px; color: #5F5A73"><strong style="color: #C81E52">▼ −0,2 pp</strong></p></article>
+        <article style="background: #FFFFFF; padding: 16px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 13px; font-weight: 500; color: #5F5A73">Engagement</h3><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 600">6,9 %</p><p style="margin: 0; font-size: 12px; color: #5F5A73"><strong style="color: #5B2FD6">▲ +0,5 pp</strong></p></article>
+        <article style="background: #FFFFFF; padding: 16px; display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 13px; font-weight: 500; color: #5F5A73">ROI</h3><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 600">2,48×</p><p style="margin: 0; font-size: 12px; color: #5F5A73"><strong style="color: #5B2FD6">▲ +0,18</strong></p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="m-drivers" style="display: flex; flex-direction: column; gap: 12px">
+      <h2 id="m-drivers" style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: #5F5A73">02 · Qué explica el resultado</h2>
+      <article style="background: #FFFFFF; border: 1px solid #E7E3F3; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+        <div>
+          <h3 style="margin: 0; font-size: 17px; font-weight: 600">Embudo de ventas</h3>
+          <p style="margin: 4px 0 0; font-size: 13px; color: #5F5A73">De las personas que te ven a las que compran</p>
+        </div>
+        <div style="height: 150px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; align-items: end">
+          <div style="height: 100%; border-radius: 8px; background: #2F1C6A"></div>
+          <div style="height: 70%; border-radius: 8px; background: #673DE6"></div>
+          <div style="height: 44%; border-radius: 8px; background: #B9A6F7"></div>
+          <div style="height: 20%; border-radius: 8px; background: #FC5185"></div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; font-size: 11px">
+          <div><p style="margin: 0; color: #5F5A73">Alcance</p><p style="margin: 2px 0 0; font-family: 'Geist Mono', monospace; font-weight: 600">1.180.000</p></div>
+          <div><p style="margin: 0; color: #5F5A73">Interacc.</p><p style="margin: 2px 0 0; font-family: 'Geist Mono', monospace; font-weight: 600">81.970</p><p style="margin: 2px 0 0; color: #5B2FD6; font-weight: 600">6,9 %</p></div>
+          <div><p style="margin: 0; color: #5F5A73">Clics</p><p style="margin: 2px 0 0; font-family: 'Geist Mono', monospace; font-weight: 600">22.050</p><p style="margin: 2px 0 0; color: #5B2FD6; font-weight: 600">26,9 %</p></div>
+          <div><p style="margin: 0; color: #5F5A73">Ventas</p><p style="margin: 2px 0 0; font-family: 'Geist Mono', monospace; font-weight: 600">355</p><p style="margin: 2px 0 0; color: #5B2FD6; font-weight: 600">1,61 %</p></div>
+        </div>
+      </article>
+      <article style="background: #FFFFFF; border: 1px solid #E7E3F3; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+        <h3 style="margin: 0; font-size: 17px; font-weight: 600">Rendimiento por plataforma</h3>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; font-size: 13px"><span style="font-weight: 600">Instagram</span><span style="font-family: 'Geist Mono', monospace">1.779 € · <strong style="color: #5B2FD6">2,97×</strong></span></div><div style="height: 22px; border-radius: 7px; background: #F1EDFC"><div style="height: 22px; width: 100%; border-radius: 7px; background: #673DE6"></div></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; font-size: 13px"><span style="font-weight: 600">TikTok</span><span style="font-family: 'Geist Mono', monospace">1.123,50 € · <strong style="color: #5B2FD6">2,50×</strong></span></div><div style="height: 22px; border-radius: 7px; background: #F1EDFC"><div style="height: 22px; width: 63%; border-radius: 7px; background: #2F1C6A"></div></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; font-size: 13px"><span style="font-weight: 600">YouTube</span><span style="font-family: 'Geist Mono', monospace">937,50 € · <strong style="color: #5B2FD6">1,88×</strong></span></div><div style="height: 22px; border-radius: 7px; background: #F1EDFC"><div style="height: 22px; width: 53%; border-radius: 7px; background: #FC5185"></div></div></div>
+        </div>
+      </article>
+      <p style="margin: 0; font-size: 12px; color: #5F5A73; text-align: center">… el resto de bloques sigue debajo, en una sola columna. Las tablas se desplazan dentro de su tarjeta.</p>
+    </section>
+  </main>
+
+  <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+    <div style="position: absolute; inset: 0; z-index: 5; background: #2F1C6A; color: #FFFFFF; display: flex; flex-direction: column">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #4A3790">
+        <span style="display: flex; align-items: center; gap: 10px">
+          <span style="width: 36px; height: 36px; border-radius: 9px; background: #FFFFFF; color: #2F1C6A; display: grid; place-items: center; font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 14px">LV</span>
+          <span style="font-weight: 600; font-size: 16px">Lucía Vega</span>
+        </span>
+        <button type="button" onClick="{{closeMenu}}" aria-label="Cerrar menú" style="min-height: 44px; padding: 0 14px; border-radius: 10px; border: 0; background: #FC5185; color: #1D1B2C; font: 700 14px Geist, sans-serif; cursor: pointer">✕ Cerrar</button>
+      </div>
+      <nav aria-label="Secciones del panel" style="padding: 8px 16px">
+        <ul style="list-style: none; margin: 0; padding: 0">
+          <li style="border-bottom: 1px solid #4A3790"><a href="#resumen" onClick="{{closeMenu}}" style="min-height: 60px; display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: 600"><span aria-hidden="true" style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #FF7BA3">01 /</span>Resumen<span aria-hidden="true" style="margin-left: auto; color: #FF7BA3">→</span></a></li>
+          <li style="border-bottom: 1px solid #4A3790"><a href="#resumen" onClick="{{closeMenu}}" style="min-height: 60px; display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: 600"><span aria-hidden="true" style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #FF7BA3">02 /</span>Plataformas<span aria-hidden="true" style="margin-left: auto; color: #FF7BA3">→</span></a></li>
+          <li style="border-bottom: 1px solid #4A3790"><a href="#resumen" onClick="{{closeMenu}}" style="min-height: 60px; display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: 600"><span aria-hidden="true" style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #FF7BA3">03 /</span>Productos<span aria-hidden="true" style="margin-left: auto; color: #FF7BA3">→</span></a></li>
+          <li style="border-bottom: 1px solid #4A3790"><a href="#resumen" onClick="{{closeMenu}}" style="min-height: 60px; display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: 600"><span aria-hidden="true" style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #FF7BA3">04 /</span>Campañas<span aria-hidden="true" style="margin-left: auto; color: #FF7BA3">→</span></a></li>
+          <li style="border-bottom: 1px solid #4A3790"><a href="#resumen" onClick="{{closeMenu}}" style="min-height: 60px; display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none; font-size: 20px; font-weight: 600"><span aria-hidden="true" style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #FF7BA3">05 /</span>Alertas<span aria-hidden="true" style="margin-left: auto; color: #FF7BA3">→</span></a></li>
+        </ul>
+      </nav>
+      <div style="margin-top: auto; padding: 20px 16px 28px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #D9D0FB">
+        <span style="font-weight: 600; color: #FFFFFF">@luvega.daily</span>
+        <span style="font-family: 'Geist Mono', monospace">1–31 oct 2026 · vs septiembre</span>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"abierto":{"editor":"boolean","default":false},"$preview":{"width":390,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(...args) {
+    super(...args);
+    this.state = { open: null };
+  }
+  renderVals() {
+    const open = this.state && this.state.open !== null ? this.state.open : (this.props.abierto ?? false);
+    return {
+      menuOpen: open,
+      openMenu: () => this.setState({ open: true }),
+      closeMenu: () => this.setState({ open: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
