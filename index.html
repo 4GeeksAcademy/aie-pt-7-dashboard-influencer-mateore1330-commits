@@ -110,7 +110,7 @@
         </div>
 
         <section id="resumen" aria-labelledby="resumen-titulo" class="flex scroll-mt-20 flex-col gap-3.5 md:scroll-mt-8">
-          <h2 id="resumen-titulo">01 · Resumen del mes</h2>
+          <h2 id="resumen-titulo" class="font-mono text-xs font-medium uppercase tracking-widest text-gris sm:text-sm">01 · Resumen del mes</h2>
           <div>
             <article>
               <h3>Comisiones</h3>
@@ -146,11 +146,13 @@
         </section>
 
         <section id="plataformas" aria-labelledby="drivers-titulo" class="flex scroll-mt-20 flex-col gap-3.5 md:scroll-mt-8">
-          <h2 id="drivers-titulo">02 · Qué explica el resultado</h2>
+          <h2 id="drivers-titulo" class="font-mono text-xs font-medium uppercase tracking-widest text-gris sm:text-sm">02 · Qué explica el resultado</h2>
           <div>
-            <article aria-labelledby="embudo-titulo">
-              <h3 id="embudo-titulo">Embudo de ventas</h3>
-              <p>De las personas que te ven a las que compran</p>
+            <article aria-labelledby="embudo-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
+              <div>
+                <h3 id="embudo-titulo" class="text-lg font-semibold">Embudo de ventas</h3>
+                <p class="mt-1 text-sm text-gris">De las personas que te ven a las que compran</p>
+              </div>
               <table class="charts-css column show-labels data-spacing-4">
                 <caption class="sr-only">Embudo de ventas</caption>
                 <thead>
@@ -187,9 +189,11 @@
               <p>Barras en escala orientativa, no proporcional</p>
             </article>
 
-            <article aria-labelledby="plataforma-titulo">
-              <h3 id="plataforma-titulo">Rendimiento por plataforma</h3>
-              <p>Comisiones y retorno de cada red</p>
+            <article aria-labelledby="plataforma-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
+              <div>
+                <h3 id="plataforma-titulo" class="text-lg font-semibold">Rendimiento por plataforma</h3>
+                <p class="mt-1 text-sm text-gris">Comisiones y retorno de cada red</p>
+              </div>
               <table class="charts-css bar show-labels">
                 <caption class="sr-only">Rendimiento por plataforma</caption>
                 <thead>
@@ -217,9 +221,11 @@
               <p>Total: 3.840 € · ROI 2,48×</p>
             </article>
 
-            <article id="productos" aria-labelledby="producto-titulo">
-              <h3 id="producto-titulo">Rendimiento por producto</h3>
-              <p>Qué producto te hace ganar más</p>
+            <article id="productos" aria-labelledby="producto-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5 scroll-mt-20 md:scroll-mt-8">
+              <div>
+                <h3 id="producto-titulo" class="text-lg font-semibold">Rendimiento por producto</h3>
+                <p class="mt-1 text-sm text-gris">Qué producto te hace ganar más</p>
+              </div>
               <ul>
                 <li>
                   <p>Producto A</p>
@@ -270,11 +276,13 @@
               </table>
             </article>
 
-            <article aria-labelledby="engagement-titulo">
-              <h3 id="engagement-titulo">Engagement por plataforma</h3>
-              <p>Cómo responde tu comunidad</p>
+            <article aria-labelledby="engagement-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
               <div>
-                <table>
+                <h3 id="engagement-titulo" class="text-lg font-semibold">Engagement por plataforma</h3>
+                <p class="mt-1 text-sm text-gris">Cómo responde tu comunidad</p>
+              </div>
+              <div class="-mx-6 overflow-x-auto px-6">
+                <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                   <caption class="sr-only">Engagement por plataforma</caption>
                   <thead>
                     <tr>
@@ -318,8 +326,10 @@
                   </tbody>
                 </table>
               </div>
-              <h3>Actividad del mes</h3>
-              <p>Lo que has publicado en cada red</p>
+              <div>
+                <h3 class="text-lg font-semibold">Actividad del mes</h3>
+                <p class="mt-1 text-sm text-gris">Lo que has publicado en cada red</p>
+              </div>
               <ul>
                 <li><strong>Instagram</strong> 12 posts · 40 stories · 8 reels</li>
                 <li><strong>TikTok</strong> 22 vídeos</li>
@@ -330,10 +340,10 @@
         </section>
 
         <section aria-labelledby="detalle-titulo" class="flex flex-col gap-3.5">
-          <h2 id="detalle-titulo">03 · El detalle</h2>
+          <h2 id="detalle-titulo" class="font-mono text-xs font-medium uppercase tracking-widest text-gris sm:text-sm">03 · El detalle</h2>
 
           <article id="alertas" aria-labelledby="alertas-titulo">
-            <h3 id="alertas-titulo">Alertas</h3>
+            <h3 id="alertas-titulo" class="text-lg font-semibold">Alertas</h3>
             <ul>
               <li>
                 <p>▼ Caída</p>
@@ -350,10 +360,10 @@
             </ul>
           </article>
 
-          <article aria-labelledby="tabla-plataformas-titulo">
-            <h3 id="tabla-plataformas-titulo">Plataformas</h3>
-            <div>
-              <table>
+          <article aria-labelledby="tabla-plataformas-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
+            <h3 id="tabla-plataformas-titulo" class="text-lg font-semibold">Plataformas</h3>
+            <div class="-mx-6 overflow-x-auto px-6">
+              <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                 <caption class="sr-only">Plataformas</caption>
                 <thead>
                   <tr>
@@ -409,14 +419,14 @@
                 </tbody>
               </table>
             </div>
-            <p>★ = mejor plataforma en esa métrica</p>
+            <p class="text-xs text-gris">★ = mejor plataforma en esa métrica</p>
           </article>
 
           <div>
-            <article id="campanas" aria-labelledby="campanas-titulo">
-              <h3 id="campanas-titulo">Campañas de octubre</h3>
-              <div>
-                <table>
+            <article id="campanas" aria-labelledby="campanas-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5 scroll-mt-20 md:scroll-mt-8">
+              <h3 id="campanas-titulo" class="text-lg font-semibold">Campañas de octubre</h3>
+              <div class="-mx-6 overflow-x-auto px-6">
+                <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                   <caption class="sr-only">Campañas de octubre</caption>
                   <thead>
                     <tr>
@@ -437,7 +447,7 @@
                       <td>Instagram, TikTok</td>
                       <td>110 / 100</td>
                       <td>825 €</td>
-                      <td><span>Superada</span></td>
+                      <td><span class="inline-flex rounded-full px-2.5 py-0.5 font-sans text-xs font-semibold bg-lavanda-100 text-morado-700">Superada</span></td>
                     </tr>
                     <tr>
                       <th scope="row">Reto 7 días</th>
@@ -446,7 +456,7 @@
                       <td>TikTok, Instagram</td>
                       <td>60 / 50</td>
                       <td>720 €</td>
-                      <td><span>Superada</span></td>
+                      <td><span class="inline-flex rounded-full px-2.5 py-0.5 font-sans text-xs font-semibold bg-lavanda-100 text-morado-700">Superada</span></td>
                     </tr>
                     <tr>
                       <th scope="row">Unboxing B</th>
@@ -455,7 +465,7 @@
                       <td>YouTube</td>
                       <td>25 / 40</td>
                       <td>450 €</td>
-                      <td><span>Por debajo</span></td>
+                      <td><span class="inline-flex rounded-full px-2.5 py-0.5 font-sans text-xs font-semibold bg-rosa-100 text-rosa-800">Por debajo</span></td>
                     </tr>
                     <tr>
                       <th scope="row">Preventa Black Friday</th>
@@ -464,18 +474,18 @@
                       <td>Instagram</td>
                       <td>25 / 30</td>
                       <td>300 €</td>
-                      <td><span>Casi</span></td>
+                      <td><span class="inline-flex rounded-full px-2.5 py-0.5 font-sans text-xs font-semibold bg-lavanda-50 text-tinta-suave">Casi</span></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p>Las 135 ventas restantes llegaron fuera de campaña.</p>
+              <p class="text-xs text-gris">Las 135 ventas restantes llegaron fuera de campaña.</p>
             </article>
 
-            <article aria-labelledby="tabla-productos-titulo">
-              <h3 id="tabla-productos-titulo">Productos</h3>
-              <div>
-                <table>
+            <article aria-labelledby="tabla-productos-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
+              <h3 id="tabla-productos-titulo" class="text-lg font-semibold">Productos</h3>
+              <div class="-mx-6 overflow-x-auto px-6">
+                <table class="w-full text-left text-sm [&_thead_th]:bg-fondo [&_thead_th]:px-3 [&_thead_th]:py-2.5 [&_thead_th]:font-mono [&_thead_th]:text-xs [&_thead_th]:font-medium [&_thead_th]:whitespace-nowrap [&_thead_th]:text-gris [&_tbody_tr]:border-t [&_tbody_tr]:border-linea [&_tbody_th]:px-3 [&_tbody_th]:py-3 [&_tbody_th]:font-semibold [&_tbody_th]:whitespace-nowrap [&_td]:px-3 [&_td]:py-3 [&_td]:font-mono [&_td]:whitespace-nowrap">
                   <caption class="sr-only">Productos</caption>
                   <thead>
                     <tr>
@@ -518,8 +528,8 @@
             </article>
           </div>
 
-          <article aria-labelledby="rankings-titulo">
-            <h3 id="rankings-titulo">Rankings</h3>
+          <article aria-labelledby="rankings-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
+            <h3 id="rankings-titulo" class="text-lg font-semibold">Rankings</h3>
             <div class="group">
               <fieldset>
                 <legend class="sr-only">Elegir ranking</legend>
