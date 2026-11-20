@@ -3,7 +3,7 @@
 > Textos y cifras definitivos del dashboard, sacados de `BRIEFING.md`. Al construir la página se
 > copian **tal cual**. Si un texto o una cifra no está aquí, se pregunta.
 >
-> Estado: **BORRADOR**, pendiente de aprobación de Mateo.
+> Estado: **APROBADO** por Mateo el 20-11-2026.
 >
 > Todas las cifras son **datos de ejemplo** y cuadran entre sí: ventas × precio × 15 % =
 > comisión, y la suma de cada tabla da el total del KPI. El aspecto visual va en `DESIGN.md`.
@@ -74,6 +74,7 @@
 
 - **Título:** Embudo de ventas
 - **Subtítulo:** De las personas que te ven a las que compran
+- **Nota (debajo de las cifras):** Barras en escala orientativa, no proporcional
 
 | Paso | Valor | Paso al siguiente |
 |---|---|---|

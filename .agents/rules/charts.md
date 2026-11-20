@@ -67,7 +67,7 @@ no devuelve nada; cada `<td>` de un gráfico tiene `[--size:`.
 | Rendimiento por plataforma | `charts-css bar show-labels` | Instagram `morado-500` · TikTok `morado-900` · YouTube `rosa-500` | 1 · 0,63 · 0,53 |
 | Reparto por producto | `charts-css bar multiple stacked` (una fila, 3 datos) | Producto A `morado-500` · Producto C `morado-900` · Producto B `rosa-500` (por comisión) | 0,352 · 0,344 · 0,304 |
 
-En el embudo se añade la nota "Barras en escala orientativa, no proporcional" (`DESIGN.md` §6).
+En el embudo se añade la nota "Barras en escala orientativa, no proporcional", tal cual de `CONTENT.md` §3.1 (su sitio lo da `DESIGN.md` §6).
 
 **Por qué:** `DESIGN.md` §8 (tipos) y §6 (colores de cada etapa, red y producto; "Los colores de
 cada red se distinguen también por claridad"); tamaños en `plans/phase-2-html.md` paso 5.

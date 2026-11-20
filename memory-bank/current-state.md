@@ -22,8 +22,8 @@ es la fusión en `main`.
 
 ## Qué hay
 
-- Documentos aprobados: `BRIEFING.md`, `CONTENT.md`, `DESIGN.md`, `design/` y `PLAN.md` con
-  `plans/`.
+- Documentos aprobados por Mateo: `BRIEFING.md`, `CONTENT.md`, `DESIGN.md`, `design/` y
+  `PLAN.md` con `plans/`.
 - `.gitignore` y hook de gitleaks (`.githooks/pre-commit`).
 - Reglas, skill `accessibility`, memory bank, `AGENTS.md` y `CLAUDE.md` (fase 1).
 
@@ -47,5 +47,8 @@ Se preguntan a Mateo cuando toque, con un cuestionario:
 - **Publicación (fase 5):** si se publica en GitHub Pages. No lo pide el enunciado.
 - **Contradicción del enunciado** ("solo Tailwind" frente a "el CSS con los estilos y las media
   queries"): se resuelve con los breakpoints de Tailwind y se explica en el README (fase 5).
-- **Estado de `BRIEFING.md` y `CONTENT.md`:** su cabecera todavía dice "BORRADOR, pendiente de
-  aprobación", aunque `PLAN.md` está aprobado y los toma como fuente de verdad.
+
+## Pendiente para la fase 4
+
+- Comprobar cuál gana entre `md:hidden` y `target:flex` en el panel `#menu`, y usar
+  `md:target:hidden` si hace falta (`plans/phase-4-menu-filters.md` paso 2).

@@ -40,10 +40,28 @@ y versionados los documentos, la maqueta y el plan. 5 commits (`25763ca` a `c420
   `--no-verify`.
 - `git status` limpio al terminar: `.learn/` y `.playwright-mcp/` ignorados.
 
-## Fase 1 — Archivos para el agente (en curso)
+## Fase 1 — Archivos para el agente (en revisión)
 
-**Qué se hizo:** `AGENTS.md`, `CLAUDE.md`, 6 archivos de reglas en `.agents/rules/` (UR, HT, TW,
-CH, A11Y y GD), los 5 archivos del memory bank y la skill `accessibility` copiada de Iron Wolf.
+**Qué se hizo:** `AGENTS.md`, `CLAUDE.md`, 6 archivos de reglas en `.agents/rules/` (UR-01 a
+UR-04, HT-01 a HT-06, TW-01 a TW-07, CH-01 a CH-04, A11Y-01 a A11Y-07 y GD-01 a GD-05), los 5
+archivos del memory bank y la skill `accessibility` copiada de Iron Wolf (idéntica, comprobado con
+`diff -r`).
 
-**Verificación:** pendiente de la prueba en frío (paso 6 de
-[`plans/phase-1-agent-harness.md`](../plans/phase-1-agent-harness.md)).
+**Prueba en frío (paso 6):** un agente nuevo, que solo podía leer este repositorio, respondió bien
+las 4 preguntas, citando la fuente de cada respuesta:
+
+1. Qué fase toca: terminar la fase 1 (no empezar la 2 sin la fusión), según `AGENTS.md` §4.
+2. `bg-purple-600` y `style="width: 60%"`: los dos prohibidos (TW-04, TW-02); la barra va con
+   `[--size:…]` (CH-02).
+3. Alerta de caída: `CONTENT.md` §4.4, texto exacto.
+4. Menú sin JavaScript: `:target` (`DESIGN.md` §7, A11Y-05).
+
+**Huecos que encontró y cómo se resolvieron:**
+
+- La nota del embudo ("Barras en escala orientativa, no proporcional") solo estaba en `DESIGN.md`
+  §6, y las reglas exigen que todo texto salga de `CONTENT.md`. Mateo decidió añadirla a
+  `CONTENT.md` §3.1; CH-03 cita ahora esa fuente.
+- `BRIEFING.md` y `CONTENT.md` seguían como "BORRADOR". Mateo los aprobó el 20-11-2026.
+- La tabla de `PLAN.md` §4 y `last_verified` estaban desfasados: se actualizan al cerrar la fase.
+- El choque entre `md:hidden` y `target:flex` sigue abierto a propósito: se resuelve en la fase 4
+  (anotado en `current-state.md`).
