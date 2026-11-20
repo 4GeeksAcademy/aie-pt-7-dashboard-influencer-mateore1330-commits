@@ -1,13 +1,14 @@
 ---
 name: architecture
 description: Estructura prevista del repositorio y de index.html — landmarks, los 3 bloques con sus tarjetas, anclas y breakpoints
-last_verified: 2026-11-20 (sobre el commit a244c9b, cierre de la fase 2)
+last_verified: 2026-11-20 (sobre el commit e76d619, cierre de la fase 3)
 ---
 
 # Arquitectura
 
 > Describe la estructura de `PLAN.md` y `DESIGN.md` §4–5. A 20-11-2026 `index.html` tiene toda la
-> estructura y el contenido (fase 2), todavía sin maquetar (ver [`current-state.md`](current-state.md)).
+> estructura y el contenido (fase 2) y todo el estilo (fase 3); falta el menú y los filtros (fase 4).
+> Ver [`current-state.md`](current-state.md).
 
 ## Estructura de archivos
 

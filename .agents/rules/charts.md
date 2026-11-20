@@ -41,13 +41,23 @@ dibujados a mano, ni otra versión de Charts.css sin preguntar a Mateo.
 - El **valor** de cada dato se da con la propiedad arbitraria de Tailwind `[--size:…]` en su
   `<td>`, y el **color** con `[--color:var(--color-…)]`, tomando la variable del tema.
 - Nunca con `style="--size: …"`: estaría prohibido por [TW-02](tailwind.md).
-- La altura del gráfico, con clases de Tailwind (`h-48`…); la separación, con las clases
-  `data-spacing-*` de Charts.css.
+- La altura: en `column`, la da Charts.css con `aspect-ratio: 21/9` sobre el `<tbody>` (no
+  depende del contenedor); en `bar`, se pone la altura en un `<div>` que envuelve la tabla
+  (`h-44`…) y `h-full` en el `<tbody>`. La separación, con las clases `data-spacing-*` de
+  Charts.css.
+- **Charts.css no va en ninguna capa y Tailwind v4 pone sus utilidades en `@layer
+  utilities`:** si los dos tocan la misma propiedad del mismo elemento (`background`,
+  `padding`, `height`…), gana siempre Charts.css. Primero se busca otro elemento donde poner la
+  clase (el relleno del dato va en `<span class="data">`, no en el `<td>`). Si no lo hay, se usa
+  el modificador `!` de Tailwind (`[&_tr]:bg-lavanda-50!`) y se anota en el PR. Las variables de
+  datos (`--size`, `--color`) no chocan, porque Charts.css solo las lee.
 
 **Por qué:** `DESIGN.md` §8 ("Tamaño y color, con clases de Tailwind, no con `style`:
 `[--size:0.63]` … y `[--color:var(--color-morado-500)]` … como propiedades arbitrarias en cada
 `<td>`. Así no hace falta CSS propio"). Los tamaños de cada gráfico están en
-[`plans/phase-2-html.md`](../../plans/phase-2-html.md) paso 5.
+[`plans/phase-2-html.md`](../../plans/phase-2-html.md) paso 5. Lo de la altura y las capas se
+comprobó en el navegador en la fase 3 ([`memory-bank/progress.md`](../../memory-bank/progress.md)
+§ "Fase 3").
 
 **✅ Haz:** `<td class="[--size:0.63] [--color:var(--color-morado-900)]">…</td>` en la fila de
 TikTok.
