@@ -79,8 +79,8 @@ Si algo no está en estos documentos, **se pregunta a Mateo**. No se inventa.
 | 0 | [`plans/phase-0-setup.md`](plans/phase-0-setup.md) | `chore/phase-0-setup` | `.gitignore`, hook de gitleaks, documentos, maqueta y plan versionados | Hecha |
 | 1 | [`plans/phase-1-agent-harness.md`](plans/phase-1-agent-harness.md) | `docs/phase-1-agent-harness` | `AGENTS.md`, `CLAUDE.md`, reglas, memory bank y skill | Hecha |
 | 2 | [`plans/phase-2-html.md`](plans/phase-2-html.md) | `feat/phase-2-html` | `index.html` semántico completo, con todos los textos, tablas y gráficos | Hecha |
-| 3 | [`plans/phase-3-tailwind.md`](plans/phase-3-tailwind.md) | `feat/phase-3-tailwind` | Todo el estilo con Tailwind, mobile-first, con sidebar desde `md` | En revisión |
-| 4 | [`plans/phase-4-menu-filters.md`](plans/phase-4-menu-filters.md) | `feat/phase-4-menu-filters` | Menú hamburguesa con `:target`, filtros de los rankings y foco visible | Pendiente |
+| 3 | [`plans/phase-3-tailwind.md`](plans/phase-3-tailwind.md) | `feat/phase-3-tailwind` | Todo el estilo con Tailwind, mobile-first, con sidebar desde `md` | Hecha |
+| 4 | [`plans/phase-4-menu-filters.md`](plans/phase-4-menu-filters.md) | `feat/phase-4-menu-filters` | Menú hamburguesa con `:target`, filtros de los rankings y foco visible | En revisión |
 | 5 | [`plans/phase-5-verification.md`](plans/phase-5-verification.md) | `chore/phase-5-verification` | Verificación completa, `verification.md` y README de entrega | Pendiente |
 
 Cada fase pasa a **En revisión** en su propia rama, antes de pedir la revisión. Pasa a **Hecha**

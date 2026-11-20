@@ -1,7 +1,7 @@
 ---
 name: progress
 description: Registro por fase — qué se hizo, decisiones, problemas y cómo se verificó
-last_verified: 2026-11-20 (sobre el commit e76d619, cierre de la fase 3)
+last_verified: 2026-11-20 (sobre el commit c89abef, cierre de la fase 4)
 ---
 
 # Progreso
@@ -102,7 +102,7 @@ plataformas, campañas y productos, y rankings con `fieldset` y 4 radios).
 - `grep`: 0 `style="`, 0 `cdn.tailwindcss.com`, `@apply`, `@tailwind`, `tailwind.config`, `on*=`;
   un solo `<script>` (el CDN) y un solo `<style>`.
 
-## Fase 3 — Estilo con Tailwind, mobile-first (en revisión)
+## Fase 3 — Estilo con Tailwind, mobile-first (PR #4, fusionado el 20-11-2026)
 
 **Qué se hizo:** todo el estilo de `index.html` con clases de Tailwind v4, en 6 commits: estructura
 (sidebar fija desde `md`, barra superior fija en móvil, `scroll-mt-*` en las anclas), componentes
@@ -146,4 +146,57 @@ producto. El panel `#menu` queda con `hidden` y las 4 listas de los rankings se 
 - `grep`: 0 `style="`, 0 `[#…]`, 0 colores de la paleta por defecto, 0 `px` arbitrarios,
   0 `text-rosa-500`, 0 sintaxis de v3. Breakpoints en uso: `sm` (19), `md` (31), `lg` (4),
   `xl` (10). Las 8 tarjetas comparten la base de TW-06.
+
+## Fase 4 — Menú hamburguesa, filtros y foco (en revisión)
+
+**Qué se hizo:** las piezas interactivas, sin JavaScript, en 3 commits:
+
+- **Menú hamburguesa** con `:target`: panel `morado-900` a pantalla completa, con "✕ Cerrar" en
+  `rosa-500`, 5 enlaces de 60 px con número y flecha en `rosa-300`, y el pie.
+- **Filtros de los rankings:** `has-checked:` en cada `<label>` y
+  `group-has-[#r-…:checked]:flex` en cada `<ol>`.
+- **Foco visible** en los 13 enlaces, en los 4 filtros y en las 4 cajas con scroll de las tablas.
+  "Saltar al contenido" se ve al recibir el foco.
+
+**Decisiones y problemas:**
+
+- **Punto abierto de la fase 1 (`md:hidden` frente a `target:flex`):** no hace falta
+  `md:target:hidden`. El panel está dentro del `<header>`, que lleva `md:hidden`; con el padre en
+  `display: none`, el panel no se ve en `md` aunque `#menu` esté apuntado. Comprobado a 768 px.
+- **Scroll en escritorio con `#menu` en la dirección:** el `<body>` se quedaba con
+  `overflow: hidden` a 768 px. Se añade `md:has-[#menu:target]:overflow-visible`.
+- **Foco que se escapaba del panel:** con el menú abierto, el tabulador salía a la página
+  oculta. Lo que queda detrás pasa a `invisible` mientras `#menu` está apuntado
+  (`[body:has(#menu:target)_&]:invisible`), y en `md` se deshace. El foco da vueltas dentro del
+  panel: Cerrar → 5 enlaces → Cerrar.
+- **Cajas con scroll de las tablas:** Chrome las hace enfocables. Llevan el contorno morado, con
+  `-outline-offset-2`.
+- **Comprobación de TW-04:** `\[#` encontraba `[#menu:target]` y `[#r-…:checked]`. Se cambia a
+  `\[#[0-9a-fA-F]{3,8}\]`.
+- **Playwright no puede pulsar los radios** (`sr-only`, 1 px): se prueban pulsando el `<label>`,
+  como hace una persona.
+
+**Verificación (Playwright):**
+
+- **Menú a 375 px:**
+  - Abrir no mueve la página (1500 px antes y después).
+  - La rueda no desplaza la página con el menú abierto.
+  - "Cerrar" deja la página donde estaba (`#cabecera`).
+  - "Campañas" lleva a la tabla con el título a 105 px, por debajo de la barra de 64 px, y cierra
+    el menú. Después el scroll vuelve.
+- **Menú a 768 y 1440 px con `#menu`:** el panel no se ve, `<main>` y `<footer>` siguen visibles
+  y hay scroll.
+- **Filtros, con ratón y con teclado (flechas):** cada filtro muestra solo su lista y se pinta en
+  `morado-500`. Al cargar, "Top productos". El foco del teclado se ve en el `<label>`.
+- **Recorrido con Tab:**
+  - A 1440 px: Saltar al contenido → 5 enlaces de la sidebar → tablas → filtros, todos con el
+    contorno morado.
+  - A 375 px: Saltar al contenido → Menú → (Enter) Cerrar y 5 enlaces, con el contorno blanco.
+- **Zonas táctiles:** "Menú", "Cerrar", los filtros y la sidebar miden 44 px; los enlaces del
+  panel, 60 px.
+- **Scroll horizontal:** `scrollWidth === clientWidth` a 375, 768, 1024 y 1440 px.
+- **`grep`:** 0 `style="`, 0 `on*=`, 0 colores arbitrarios, 0 `px` arbitrarios, 0
+  `outline-none`; 1 `<script>` y 1 `<style>`.
+- **Capturas** en `design/screenshots/fase-4/`: el menú abierto, los 4 filtros, el foco en la
+  sidebar y "Saltar al contenido".
 
