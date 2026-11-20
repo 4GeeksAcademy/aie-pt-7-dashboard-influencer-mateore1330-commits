@@ -1,14 +1,14 @@
 ---
 name: architecture
 description: Estructura prevista del repositorio y de index.html — landmarks, los 3 bloques con sus tarjetas, anclas y breakpoints
-last_verified: 2026-11-20 (sobre el commit e76d619, cierre de la fase 3)
+last_verified: 2026-11-20 (sobre el commit c89abef, cierre de la fase 4)
 ---
 
 # Arquitectura
 
 > Describe la estructura de `PLAN.md` y `DESIGN.md` §4–5. A 20-11-2026 `index.html` tiene toda la
-> estructura y el contenido (fase 2) y todo el estilo (fase 3); falta el menú y los filtros (fase 4).
-> Ver [`current-state.md`](current-state.md).
+> estructura y el contenido (fase 2), todo el estilo (fase 3) y el menú, los filtros y el foco
+> (fase 4). Ver [`current-state.md`](current-state.md).
 
 ## Estructura de archivos
 
@@ -59,10 +59,11 @@ barra fija del móvil no tape el título.
 
 ## Piezas sin JavaScript
 
-- **Menú:** `:target` sobre `#menu`; bloqueo de scroll con `has-[#menu:target]:overflow-hidden`
-  en el `<body>` ([A11Y-05](../.agents/rules/accessibility.md)).
+- **Menú:** `:target` sobre `#menu`, que vive dentro del `<header>` (`md:hidden`); bloqueo de
+  scroll con `has-[#menu:target]:overflow-hidden` en el `<body>` (y `overflow-visible` desde `md`);
+  lo de detrás, `invisible` mientras está abierto ([A11Y-05](../.agents/rules/accessibility.md)).
 - **Filtros de los rankings:** contenedor `group`, radios `name="ranking"` con `id="r-…"`,
-  `has-checked:` en cada `<label>` y `group-has-[#r-…:checked]:block` en cada `<ol>`
+  `has-checked:` en cada `<label>` y `hidden … group-has-[#r-…:checked]:flex` en cada `<ol>`
   ([A11Y-06](../.agents/rules/accessibility.md)).
 - **Gráficos:** 3 `<table class="charts-css …">` con `[--size:…]` y `[--color:…]`
   ([CH-02](../.agents/rules/charts.md)).

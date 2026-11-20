@@ -64,6 +64,9 @@ fase 5, prueba con VoiceOver del menú (`plans/phase-5-verification.md` paso 2).
   tiene foco visible: `focus-visible:outline-2 focus-visible:outline-morado-500
   focus-visible:outline-offset-2`. Sobre el panel `morado-900`, el contorno es blanco. En los
   filtros, el foco del radio se ve en su `<label>` (`has-focus-visible:outline-*`).
+- Las cajas `overflow-x-auto` de las tablas también reciben el foco (Chrome hace enfocables las
+  zonas con scroll, y así se pueden mover con el teclado): llevan el mismo contorno morado, con
+  `focus-visible:-outline-offset-2` para que no lo recorte la tarjeta.
 - Nunca se quita el contorno (`outline-none`) sin poner otro foco visible.
 
 **Por qué:** `DESIGN.md` §10 ("Foco visible en todos los enlaces y filtros (`focus-visible:…`)"),
@@ -101,14 +104,24 @@ navegación, botón y `<label>` de filtro.
 - "Cerrar" apunta a `#cabecera` (la barra fija), así que cierra sin mover la página.
 - Al pulsar una sección, `#menu` deja de estar apuntado y el panel se cierra.
 - Mientras está abierto, la página no hace scroll: `has-[#menu:target]:overflow-hidden` en el
-  `<body>`. En `md` y más, el panel nunca se ve.
+  `<body>`, y `md:has-[#menu:target]:overflow-visible` para que el escritorio no se quede sin
+  scroll si la dirección lleva `#menu`.
+- En `md` y más, el panel nunca se ve: está dentro del `<header id="cabecera">`, que lleva
+  `md:hidden`. No hace falta `md:target:hidden`.
+- Mientras está abierto, lo que queda detrás (enlace "Saltar al contenido", logo y "Menú" de la
+  barra, `<main>` y `<footer>`) lleva `[body:has(#menu:target)_&]:invisible`; en `<main>` y
+  `<footer>`, además, `md:[body:has(#menu:target)_&]:visible`. Así el tabulador y el lector de
+  pantalla no salen del panel.
 
 Se **acepta** lo que se pierde: el lector oye "enlace" en vez de "botón, expandido"; Esc no
 cierra; la URL muestra `#menu`; "Atrás" lo cierra. No se intenta arreglar con JavaScript ni con
 ARIA que mienta (`role="button"`, `aria-expanded` fijo).
 
 **Por qué:** `DESIGN.md` §7 ("Cómo se hace sin JavaScript (técnica `:target`, como en
-web-artist)" y "Lo que se pierde (aceptado, igual que en web-artist)"); `PLAN.md` §6.
+web-artist)" y "Lo que se pierde (aceptado, igual que en web-artist)"); `PLAN.md` §6. Que el
+foco se escape a la página oculta no está entre lo que `DESIGN.md` §7 acepta perder; el scroll
+en escritorio y el foco atrapado se comprobaron en la fase 4
+([`memory-bank/progress.md`](../../memory-bank/progress.md) § "Fase 4").
 
 **✅ Haz:** `<div id="menu" class="hidden target:flex fixed inset-0 …">`.
 

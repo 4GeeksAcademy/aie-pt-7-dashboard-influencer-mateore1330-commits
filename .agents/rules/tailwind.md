@@ -116,7 +116,7 @@ de Tailwind") y `PLAN.md` §5 ("Ningún color fuera de `DESIGN.md` §2").
 
 ```bash
 grep -noE '\b(bg|text|border|outline|ring|fill|stroke|from|to|via|divide|decoration|shadow)-(red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose|slate|gray|zinc|neutral|stone|black)-' index.html   # sin resultados
-grep -nE '\[#|\[rgb|\[hsl|\[oklch' index.html                                                  # sin resultados
+grep -nE '\[#[0-9a-fA-F]{3,8}\]|\[rgb|\[hsl|\[oklch' index.html                                                  # sin resultados
 ```
 
 ## TW-05 · Mobile-first, con los breakpoints de `DESIGN.md` §5
