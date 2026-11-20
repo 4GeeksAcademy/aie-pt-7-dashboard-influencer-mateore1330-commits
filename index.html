@@ -41,7 +41,7 @@
     }
   </style>
 </head>
-<body class="bg-fondo font-sans text-tinta antialiased">
+<body class="bg-fondo font-sans text-tinta antialiased has-[#menu:target]:overflow-hidden md:has-[#menu:target]:overflow-visible">
   <a href="#contenido" class="sr-only">Saltar al contenido</a>
 
   <div class="md:flex">
@@ -77,25 +77,25 @@
           Menú
         </a>
 
-        <div id="menu" class="hidden">
-          <div>
-            <span aria-hidden="true">LV</span>
-            <a href="#cabecera" aria-label="Cerrar menú">
+        <div id="menu" class="fixed inset-0 z-50 hidden flex-col overflow-y-auto bg-morado-900 px-4 text-white target:flex sm:px-6">
+          <div class="flex h-16 shrink-0 items-center justify-between">
+            <span aria-hidden="true" class="grid size-9 shrink-0 place-items-center rounded-lg bg-white font-mono text-sm font-semibold text-morado-900">LV</span>
+            <a href="#cabecera" aria-label="Cerrar menú" class="inline-flex min-h-11 items-center gap-2 rounded-lg bg-rosa-500 px-3.5 text-sm font-semibold text-tinta">
               <span aria-hidden="true">✕</span>
               Cerrar
             </a>
           </div>
-          <nav aria-label="Secciones del panel">
-            <ul>
-              <li><a href="#resumen"><span aria-hidden="true">01 /</span> Resumen <span aria-hidden="true">→</span></a></li>
-              <li><a href="#plataformas"><span aria-hidden="true">02 /</span> Plataformas <span aria-hidden="true">→</span></a></li>
-              <li><a href="#productos"><span aria-hidden="true">03 /</span> Productos <span aria-hidden="true">→</span></a></li>
-              <li><a href="#campanas"><span aria-hidden="true">04 /</span> Campañas <span aria-hidden="true">→</span></a></li>
-              <li><a href="#alertas"><span aria-hidden="true">05 /</span> Alertas <span aria-hidden="true">→</span></a></li>
+          <nav aria-label="Secciones del panel" class="mt-6 flex-1">
+            <ul class="border-t border-morado-800">
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#resumen"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">01 /</span> Resumen <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#plataformas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">02 /</span> Plataformas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#productos"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">03 /</span> Productos <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#campanas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">04 /</span> Campañas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
+              <li class="border-b border-morado-800"><a class="flex min-h-15 items-center gap-3 text-xl font-medium text-white" href="#alertas"><span aria-hidden="true" class="font-mono text-sm text-rosa-300">05 /</span> Alertas <span aria-hidden="true" class="ms-auto text-rosa-300">→</span></a></li>
             </ul>
           </nav>
-          <p>
-            <span>@luvega.daily</span> · <span>1–31 oct 2026 · comparado con septiembre</span>
+          <p class="py-6 text-sm">
+            <span class="font-medium">@luvega.daily</span> · <span class="font-mono text-xs text-lavanda-200">1–31 oct 2026 · comparado con septiembre</span>
           </p>
         </div>
       </header>
