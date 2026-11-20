@@ -1,7 +1,7 @@
 ---
 name: architecture
 description: Estructura prevista del repositorio y de index.html — landmarks, los 3 bloques con sus tarjetas, anclas y breakpoints
-last_verified: 2026-11-20 (sobre el commit 5a01430, fase 1)
+last_verified: 2026-11-20 (sobre el commit 40d7539, cierre de la fase 1)
 ---
 
 # Arquitectura
