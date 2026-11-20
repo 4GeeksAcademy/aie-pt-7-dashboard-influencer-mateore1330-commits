@@ -539,28 +539,28 @@
             <div class="group flex flex-col gap-4">
               <fieldset class="flex flex-wrap gap-1 rounded-xl bg-lavanda-50 p-1">
                 <legend class="sr-only">Elegir ranking</legend>
-                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-productos" class="sr-only" checked> Top productos</label>
-                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-plataformas" class="sr-only"> Top plataformas</label>
-                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-campanas" class="sr-only"> Top campañas</label>
-                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-oportunidades" class="sr-only"> Oportunidades</label>
+                <label class="relative inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave hover:text-tinta has-checked:bg-morado-500 has-checked:text-white has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-morado-500"><input type="radio" name="ranking" id="r-productos" class="sr-only" checked> Top productos</label>
+                <label class="relative inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave hover:text-tinta has-checked:bg-morado-500 has-checked:text-white has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-morado-500"><input type="radio" name="ranking" id="r-plataformas" class="sr-only"> Top plataformas</label>
+                <label class="relative inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave hover:text-tinta has-checked:bg-morado-500 has-checked:text-white has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-morado-500"><input type="radio" name="ranking" id="r-campanas" class="sr-only"> Top campañas</label>
+                <label class="relative inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave hover:text-tinta has-checked:bg-morado-500 has-checked:text-white has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-morado-500"><input type="radio" name="ranking" id="r-oportunidades" class="sr-only"> Oportunidades</label>
               </fieldset>
 
-              <ol aria-label="Top productos" class="flex flex-col divide-y divide-linea">
+              <ol aria-label="Top productos" class="hidden flex-col divide-y divide-linea group-has-[#r-productos:checked]:flex">
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Producto A</strong> <span class="text-gris">· 1.350 €</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">Producto C</strong> <span class="text-gris">· 1.320 €</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">Producto B</strong> <span class="text-gris">· 1.170 €</span></span></li>
               </ol>
-              <ol aria-label="Top plataformas" class="flex flex-col divide-y divide-linea">
+              <ol aria-label="Top plataformas" class="hidden flex-col divide-y divide-linea group-has-[#r-plataformas:checked]:flex">
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Instagram</strong> <span class="text-gris">· 2,97×</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">TikTok</strong> <span class="text-gris">· 2,50×</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">YouTube</strong> <span class="text-gris">· 1,88×</span></span></li>
               </ol>
-              <ol aria-label="Top campañas" class="flex flex-col divide-y divide-linea">
+              <ol aria-label="Top campañas" class="hidden flex-col divide-y divide-linea group-has-[#r-campanas:checked]:flex">
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Rutina de otoño</strong> <span class="text-gris">· 110</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">Reto 7 días</strong> <span class="text-gris">· 60</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">Unboxing B</strong> <span class="text-gris">· 25</span></span></li>
               </ol>
-              <ol aria-label="Oportunidades" class="flex flex-col divide-y divide-linea">
+              <ol aria-label="Oportunidades" class="hidden flex-col divide-y divide-linea group-has-[#r-oportunidades:checked]:flex">
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Más Producto B en YouTube:</strong> <span class="text-gris">es el de precio más alto y YouTube tiene el mejor CTR (3,0 %).</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">Revisa las stories de Instagram:</strong> <span class="text-gris">su CTR (0,8 %) está muy por debajo de tu media.</span></span></li>
                 <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">Lleva el engagement de TikTok a ventas:</strong> <span class="text-gris">tiene el mejor engagement (8,2 %) pero la conversión más baja (1,22 %).</span></span></li>
