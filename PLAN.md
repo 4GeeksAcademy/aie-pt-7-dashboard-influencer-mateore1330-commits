@@ -76,8 +76,8 @@ Si algo no está en estos documentos, **se pregunta a Mateo**. No se inventa.
 
 | Fase | Archivo | Rama | Resultado | Estado |
 |---|---|---|---|---|
-| 0 | [`plans/phase-0-setup.md`](plans/phase-0-setup.md) | `chore/phase-0-setup` | `.gitignore`, hook de gitleaks, documentos, maqueta y plan versionados | En revisión |
-| 1 | [`plans/phase-1-agent-harness.md`](plans/phase-1-agent-harness.md) | `docs/phase-1-agent-harness` | `AGENTS.md`, `CLAUDE.md`, reglas, memory bank y skill | Pendiente |
+| 0 | [`plans/phase-0-setup.md`](plans/phase-0-setup.md) | `chore/phase-0-setup` | `.gitignore`, hook de gitleaks, documentos, maqueta y plan versionados | Hecha |
+| 1 | [`plans/phase-1-agent-harness.md`](plans/phase-1-agent-harness.md) | `docs/phase-1-agent-harness` | `AGENTS.md`, `CLAUDE.md`, reglas, memory bank y skill | En revisión |
 | 2 | [`plans/phase-2-html.md`](plans/phase-2-html.md) | `feat/phase-2-html` | `index.html` semántico completo, con todos los textos, tablas y gráficos | Pendiente |
 | 3 | [`plans/phase-3-tailwind.md`](plans/phase-3-tailwind.md) | `feat/phase-3-tailwind` | Todo el estilo con Tailwind, mobile-first, con sidebar desde `md` | Pendiente |
 | 4 | [`plans/phase-4-menu-filters.md`](plans/phase-4-menu-filters.md) | `feat/phase-4-menu-filters` | Menú hamburguesa con `:target`, filtros de los rankings y foco visible | Pendiente |

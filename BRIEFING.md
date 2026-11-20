@@ -2,7 +2,7 @@
 
 ## Briefing de la clienta
 
-> Estado: **BORRADOR**, pendiente de aprobación de Mateo.
+> Estado: **APROBADO** por Mateo el 20-11-2026.
 >
 > La persona es **ficticia** (aprobada por Mateo el 20-11-2026). Todas las cifras son datos de
 > ejemplo y están en `CONTENT.md`.
