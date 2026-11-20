@@ -1,7 +1,7 @@
 ---
 name: progress
 description: Registro por fase — qué se hizo, decisiones, problemas y cómo se verificó
-last_verified: 2026-11-20 (sobre el commit c89abef, cierre de la fase 4)
+last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
 ---
 
 # Progreso
@@ -199,4 +199,31 @@ producto. El panel `#menu` queda con `hidden` y las 4 listas de los rankings se 
   `outline-none`; 1 `<script>` y 1 `<style>`.
 - **Capturas** en `design/screenshots/fase-4/`: el menú abierto, los 4 filtros, el foco en la
   sidebar y "Saltar al contenido".
+
+**Ajustes tras la revisión de Mateo (20-11-2026):** Mateo vio en Brave que la tarjeta de
+comisiones era más grande que las otras, que las tablas se cortaban sin barra de scroll visible
+(macOS la oculta) y fallos de márgenes. Decidió con un cuestionario:
+
+- **KPIs iguales, como la maqueta:** 5 columnas iguales desde `xl`. Antes `DESIGN.md` §5 hacía
+  comisiones el doble (en eso chocaba con la maqueta y no se le avisó en la fase 3). Cifras en
+  `text-3xl` hasta `2xl`, para que "3.840 €" quepa a 1280 px. Nombres de KPI con `xl:min-h-10`
+  para alinear las cifras.
+- **Tablas sin scroll en escritorio:** desde 1024 px caben todas. Hacía falta:
+  - Engagement y producto ocupan las 2 columnas en `xl`.
+  - Campañas y productos, una debajo de otra.
+  - Celdas `text-xs px-1.5` hasta `xl`, y títulos de columna que pueden partirse.
+  - Margen lateral `px-6` hasta `xl` (la de plataformas no cabía a 1024 px por 32 px).
+- **Tablas por debajo de 1024 px:** todas se desplazan (`min-w-3xl`), con el aviso "Desliza para
+  ver toda la tabla →" (nuevo en `CONTENT.md` §0) y un degradado a la derecha. Con un ancho
+  mínimo común, el aviso nunca aparece en una tabla que cabe (entre 768 y 1023 px alguna cabía).
+- **Márgenes:**
+  - Alertas dentro de una tarjeta.
+  - Huecos de 16 px en las 3 secciones.
+  - Pie de costes al fondo de su tarjeta.
+  - "(sept: …)" sin partir.
+  - Datos de producto en 2 columnas desde `lg`.
+
+`DESIGN.md` §3, §5 y §6, TW-05 y TW-07 quedan actualizados. Comprobado con Playwright a 375, 640,
+768, 900, 1023, 1024, 1100, 1279, 1280, 1440 y 1728 px: sin scroll en la página y, desde 1024 px,
+ninguna tabla cortada. Capturas `pagina-*.png` en `design/screenshots/fase-4/`.
 

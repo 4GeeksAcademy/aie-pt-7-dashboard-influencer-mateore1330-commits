@@ -88,7 +88,7 @@ Google Fonts con `<link>` en el `<head>`: **Geist** (400, 500, 600, 700) y **Gei
 | `h1` "Hola, Lucía" | Geist | `text-3xl` → `md:text-4xl` | 600, `tracking-tight` |
 | `h2` de bloque ("01 · Resumen del mes") | Geist Mono | `text-xs` / `text-sm`, mayúsculas, `tracking-widest` | 500, `gris` |
 | `h3` de tarjeta | Geist | `text-lg` | 600 |
-| Cifra de KPI | Geist Mono | `text-3xl` → `xl:text-4xl` | 600, `tracking-tighter` |
+| Cifra de KPI | Geist Mono | `text-3xl` → `2xl:text-4xl` | 600, `tracking-tighter` |
 | Cifras de gráficos y tablas | Geist Mono | `text-sm` / `text-xs` | 400–600 |
 | Texto normal | Geist | `text-sm` / `text-base` | 400–500 |
 
@@ -129,12 +129,22 @@ Móvil y tablet pequeña (< md)          Tablet y escritorio (≥ md)
 | Base (< 640 px) | Barra superior fija con "Menú". Todo en una columna. KPIs en rejilla de 2 columnas, con comisiones ocupando las 2 |
 | `sm` (≥ 640 px) | Más aire (`px-6`). Las tarjetas de producto pasan a 3 columnas |
 | `md` (≥ 768 px) | **Aparece la sidebar** (fija, `w-56`, alto de pantalla) y desaparecen la barra superior y el menú hamburguesa. Cabecera con el periodo a la derecha |
-| `lg` (≥ 1024 px) | KPIs en 3 columnas: comisiones ocupa 2 filas y los otros 4 van en 2 × 2. Alertas en 3 columnas |
-| `xl` (≥ 1280 px) | KPIs en una sola franja de 6 columnas (comisiones ocupa 2). Drivers en 2 columnas. Campañas y productos, lado a lado |
+| `lg` (≥ 1024 px) | Alertas en 3 columnas. **Todas las tablas caben sin scroll**: celdas compactas (`text-xs`, `px-1.5`) y títulos de columna que pueden ocupar 2 líneas |
+| `xl` (≥ 1280 px) | KPIs en una sola franja de **5 columnas iguales**, como la maqueta. Drivers en 2 columnas: embudo y plataforma lado a lado; producto y engagement ocupan las 2. Campañas y productos, una debajo de otra (lado a lado no caben). Tablas con `text-sm` y `px-3` |
 
 **Nunca hay scroll horizontal de la página:** las tablas van dentro de una caja
 `overflow-x-auto` y se desplazan dentro de su tarjeta. Los elementos de rejilla y flex que
 contienen tablas llevan `min-w-0`.
+
+**Tablas por debajo de `lg`:** todas tienen un ancho mínimo (`min-w-3xl`) y se desplazan, para
+que el comportamiento sea igual en todas. Como en macOS e iOS la barra de scroll no se ve hasta
+que se usa, cada una lleva encima el aviso "Desliza para ver toda la tabla →" (`CONTENT.md` §0) y
+un degradado `superficie` en el borde derecho, los dos solo por debajo de `lg` y con
+`aria-hidden="true"`. Desde `lg` caben todas sin scroll.
+
+> Cambios aprobados por Mateo el 20-11-2026, tras revisar la fase 4: KPIs iguales (antes
+> comisiones ocupaba el doble), tablas sin scroll en escritorio con aviso en móvil, y las alertas
+> dentro de una tarjeta.
 
 ---
 
@@ -150,7 +160,7 @@ contienen tablas llevan `min-w-0`.
 | **Rendimiento por plataforma** | Gráfico de barras horizontales (§8), una por red con su color, sobre una pista `lavanda-50`. Encima de cada barra: red, comisión y ROI en `morado-600`. Pie con los costes |
 | **Rendimiento por producto** | Tres tarjetas pequeñas `lavanda-50` (producto y precio, comisión en Geist Mono, ventas y engagement) ordenadas por comisión, y debajo una barra apilada (§8) con el reparto de los 3.840 € |
 | **Engagement y actividad** | Tabla compacta (me gusta, comentarios, compartidos, guardados, engagement) y debajo chips `lavanda-50` con lo publicado en cada red |
-| **Alertas** | Tres tarjetas con su etiqueta en Geist Mono mayúsculas: **Caída** (fondo `rosa-50`, borde `rosa-200`, etiqueta `rosa-700`, "▼"), **Pico** (fondo `lavanda-pico`, borde `lavanda-400`, etiqueta `morado-600`, "▲") y **Anomalía** (blanco, borde `linea`, etiqueta `tinta-suave`, "◆"). Nada de bordes laterales de color |
+| **Alertas** | Una tarjeta (la base común) con el título "Alertas" y, dentro, tres tarjetas con su etiqueta en Geist Mono mayúsculas: **Caída** (fondo `rosa-50`, borde `rosa-200`, etiqueta `rosa-700`, "▼"), **Pico** (fondo `lavanda-pico`, borde `lavanda-400`, etiqueta `morado-600`, "▲") y **Anomalía** (blanco, borde `linea`, etiqueta `tinta-suave`, "◆"). Nada de bordes laterales de color |
 | **Tablas** | `<table>` con `<caption>` (puede ir oculta con `sr-only` si el `h3` ya la nombra), `<th scope="col">` y `<th scope="row">`. Cabecera en Geist Mono `text-xs` sobre `fondo`; filas separadas por `linea`; cifras en Geist Mono. Lo mejor de cada métrica, en `morado-600` y con ★ |
 | **Etiquetas de estado** | Píldoras `rounded-full`: "Superada" (`lavanda-100` / `morado-700`), "Por debajo" (`rosa-100` / `rosa-800`), "Casi" (`lavanda-50` / `tinta-suave`) |
 | **Rankings con filtros** | Grupo de 4 filtros sobre una cápsula `lavanda-50`; el elegido en `morado-500` con texto blanco. Debajo, el listado de 3 puestos: número en Geist Mono `rosa-700` ("01"), título en negrita y valor en `gris` |

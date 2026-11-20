@@ -1,7 +1,7 @@
 ---
 name: current-state
 description: Qué hay hoy en el repositorio, qué falta, cuál es la siguiente fase y qué decisiones siguen abiertas
-last_verified: 2026-11-20 (sobre el commit c89abef, cierre de la fase 4)
+last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
 ---
 
 # Estado actual
