@@ -348,20 +348,20 @@
         <section aria-labelledby="detalle-titulo" class="flex flex-col gap-3.5">
           <h2 id="detalle-titulo" class="font-mono text-xs font-medium uppercase tracking-widest text-gris sm:text-sm">03 · El detalle</h2>
 
-          <article id="alertas" aria-labelledby="alertas-titulo">
+          <article id="alertas" aria-labelledby="alertas-titulo" class="flex scroll-mt-20 flex-col gap-3 md:scroll-mt-8">
             <h3 id="alertas-titulo" class="text-lg font-semibold">Alertas</h3>
-            <ul>
-              <li>
-                <p>▼ Caída</p>
-                <p><strong>Conversión en YouTube −0,6 pp.</strong> Baja al 1,67 % durante "Unboxing B".</p>
+            <ul class="grid gap-4 lg:grid-cols-3">
+              <li class="flex flex-col gap-2 rounded-2xl border p-5 border-rosa-200 bg-rosa-50">
+                <p class="font-mono text-xs font-semibold uppercase tracking-widest text-rosa-700">▼ Caída</p>
+                <p class="text-sm text-tinta-suave"><strong class="font-semibold text-tinta">Conversión en YouTube −0,6 pp.</strong> Baja al 1,67 % durante "Unboxing B".</p>
               </li>
-              <li>
-                <p>▲ Pico</p>
-                <p><strong>14 ventas en un día en TikTok.</strong> El 12 de octubre, con "Reto 7 días" (la media es de 3,6).</p>
+              <li class="flex flex-col gap-2 rounded-2xl border p-5 border-lavanda-400 bg-lavanda-pico">
+                <p class="font-mono text-xs font-semibold uppercase tracking-widest text-morado-600">▲ Pico</p>
+                <p class="text-sm text-tinta-suave"><strong class="font-semibold text-tinta">14 ventas en un día en TikTok.</strong> El 12 de octubre, con "Reto 7 días" (la media es de 3,6).</p>
               </li>
-              <li>
-                <p>◆ Anomalía</p>
-                <p><strong>Stories de Instagram con CTR del 0,8 %.</strong> El resto de tu contenido en Instagram está en el 2,3 %.</p>
+              <li class="flex flex-col gap-2 rounded-2xl border p-5 border-linea bg-superficie">
+                <p class="font-mono text-xs font-semibold uppercase tracking-widest text-tinta-suave">◆ Anomalía</p>
+                <p class="text-sm text-tinta-suave"><strong class="font-semibold text-tinta">Stories de Instagram con CTR del 0,8 %.</strong> El resto de tu contenido en Instagram está en el 2,3 %.</p>
               </li>
             </ul>
           </article>
@@ -393,15 +393,15 @@
                     <td>8.400</td>
                     <td>2,0 %</td>
                     <td>168</td>
-                    <td>2,00 % ★</td>
+                    <td class="font-semibold text-morado-600">2,00 % ★</td>
                     <td>0,040 %</td>
-                    <td>1.779 € ★</td>
-                    <td>2,97× ★</td>
+                    <td class="font-semibold text-morado-600">1.779 € ★</td>
+                    <td class="font-semibold text-morado-600">2,97× ★</td>
                   </tr>
                   <tr>
                     <th scope="row">TikTok</th>
-                    <td>610.000 ★</td>
-                    <td>8,2 % ★</td>
+                    <td class="font-semibold text-morado-600">610.000 ★</td>
+                    <td class="font-semibold text-morado-600">8,2 % ★</td>
                     <td>9.150</td>
                     <td>1,5 %</td>
                     <td>112</td>
@@ -415,10 +415,10 @@
                     <td>150.000</td>
                     <td>4,5 %</td>
                     <td>4.500</td>
-                    <td>3,0 % ★</td>
+                    <td class="font-semibold text-morado-600">3,0 % ★</td>
                     <td>75</td>
                     <td>1,67 %</td>
-                    <td>0,050 % ★</td>
+                    <td class="font-semibold text-morado-600">0,050 % ★</td>
                     <td>937,50 €</td>
                     <td>1,88×</td>
                   </tr>
@@ -428,7 +428,7 @@
             <p class="text-xs text-gris">★ = mejor plataforma en esa métrica</p>
           </article>
 
-          <div>
+          <div class="grid gap-4 xl:grid-cols-2">
             <article id="campanas" aria-labelledby="campanas-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5 scroll-mt-20 md:scroll-mt-8">
               <h3 id="campanas-titulo" class="text-lg font-semibold">Campañas de octubre</h3>
               <div class="-mx-6 overflow-x-auto px-6">
@@ -536,34 +536,34 @@
 
           <article aria-labelledby="rankings-titulo" class="bg-superficie border border-linea rounded-2xl p-6 flex min-w-0 flex-col gap-5">
             <h3 id="rankings-titulo" class="text-lg font-semibold">Rankings</h3>
-            <div class="group">
-              <fieldset>
+            <div class="group flex flex-col gap-4">
+              <fieldset class="flex flex-wrap gap-1 rounded-xl bg-lavanda-50 p-1">
                 <legend class="sr-only">Elegir ranking</legend>
-                <label><input type="radio" name="ranking" id="r-productos" class="sr-only" checked> Top productos</label>
-                <label><input type="radio" name="ranking" id="r-plataformas" class="sr-only"> Top plataformas</label>
-                <label><input type="radio" name="ranking" id="r-campanas" class="sr-only"> Top campañas</label>
-                <label><input type="radio" name="ranking" id="r-oportunidades" class="sr-only"> Oportunidades</label>
+                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-productos" class="sr-only" checked> Top productos</label>
+                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-plataformas" class="sr-only"> Top plataformas</label>
+                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-campanas" class="sr-only"> Top campañas</label>
+                <label class="inline-flex min-h-11 cursor-pointer items-center rounded-lg px-3.5 text-sm font-medium text-tinta-suave"><input type="radio" name="ranking" id="r-oportunidades" class="sr-only"> Oportunidades</label>
               </fieldset>
 
-              <ol aria-label="Top productos">
-                <li><span aria-hidden="true">01</span> <strong>Producto A</strong> · 1.350 €</li>
-                <li><span aria-hidden="true">02</span> <strong>Producto C</strong> · 1.320 €</li>
-                <li><span aria-hidden="true">03</span> <strong>Producto B</strong> · 1.170 €</li>
+              <ol aria-label="Top productos" class="flex flex-col divide-y divide-linea">
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Producto A</strong> <span class="text-gris">· 1.350 €</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">Producto C</strong> <span class="text-gris">· 1.320 €</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">Producto B</strong> <span class="text-gris">· 1.170 €</span></span></li>
               </ol>
-              <ol aria-label="Top plataformas">
-                <li><span aria-hidden="true">01</span> <strong>Instagram</strong> · 2,97×</li>
-                <li><span aria-hidden="true">02</span> <strong>TikTok</strong> · 2,50×</li>
-                <li><span aria-hidden="true">03</span> <strong>YouTube</strong> · 1,88×</li>
+              <ol aria-label="Top plataformas" class="flex flex-col divide-y divide-linea">
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Instagram</strong> <span class="text-gris">· 2,97×</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">TikTok</strong> <span class="text-gris">· 2,50×</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">YouTube</strong> <span class="text-gris">· 1,88×</span></span></li>
               </ol>
-              <ol aria-label="Top campañas">
-                <li><span aria-hidden="true">01</span> <strong>Rutina de otoño</strong> · 110</li>
-                <li><span aria-hidden="true">02</span> <strong>Reto 7 días</strong> · 60</li>
-                <li><span aria-hidden="true">03</span> <strong>Unboxing B</strong> · 25</li>
+              <ol aria-label="Top campañas" class="flex flex-col divide-y divide-linea">
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Rutina de otoño</strong> <span class="text-gris">· 110</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">Reto 7 días</strong> <span class="text-gris">· 60</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">Unboxing B</strong> <span class="text-gris">· 25</span></span></li>
               </ol>
-              <ol aria-label="Oportunidades">
-                <li><span aria-hidden="true">01</span> <strong>Más Producto B en YouTube:</strong> es el de precio más alto y YouTube tiene el mejor CTR (3,0 %).</li>
-                <li><span aria-hidden="true">02</span> <strong>Revisa las stories de Instagram:</strong> su CTR (0,8 %) está muy por debajo de tu media.</li>
-                <li><span aria-hidden="true">03</span> <strong>Lleva el engagement de TikTok a ventas:</strong> tiene el mejor engagement (8,2 %) pero la conversión más baja (1,22 %).</li>
+              <ol aria-label="Oportunidades" class="flex flex-col divide-y divide-linea">
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">01</span> <span><strong class="font-semibold">Más Producto B en YouTube:</strong> <span class="text-gris">es el de precio más alto y YouTube tiene el mejor CTR (3,0 %).</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">02</span> <span><strong class="font-semibold">Revisa las stories de Instagram:</strong> <span class="text-gris">su CTR (0,8 %) está muy por debajo de tu media.</span></span></li>
+                <li class="flex items-baseline gap-3 py-3 text-sm"><span aria-hidden="true" class="font-mono font-semibold text-rosa-700">03</span> <span><strong class="font-semibold">Lleva el engagement de TikTok a ventas:</strong> <span class="text-gris">tiene el mejor engagement (8,2 %) pero la conversión más baja (1,22 %).</span></span></li>
               </ol>
             </div>
           </article>
