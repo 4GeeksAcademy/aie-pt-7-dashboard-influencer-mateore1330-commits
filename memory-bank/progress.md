@@ -227,3 +227,7 @@ comisiones era más grande que las otras, que las tablas se cortaban sin barra d
 768, 900, 1023, 1024, 1100, 1279, 1280, 1440 y 1728 px: sin scroll en la página y, desde 1024 px,
 ninguna tabla cortada. Capturas `pagina-*.png` en `design/screenshots/fase-4/`.
 
+**Pie del menú quitado (21-11-2026):** Mateo pidió quitar el pie del menú móvil (@luvega.daily y
+el periodo). Se borró el `<p>` de `index.html` y se actualizaron `CONTENT.md` §1, `DESIGN.md` §2 y
+§7 y A11Y-01. `lavanda-200` queda en el tema, sin uso.
+

@@ -17,8 +17,8 @@ combinaciones de texto y fondo que describe `DESIGN.md` §2 y §6. En concreto:
 - **`rosa-500` nunca es color de texto sobre fondo claro** (da 3,16:1). Sobre claro, el rosa de
   texto es `rosa-700` (o `rosa-800` en la etiqueta "Por debajo").
 - Sobre `rosa-500` (píldora "+12 %", botón "Cerrar") el texto es `tinta`, no blanco.
-- Sobre `morado-900` (menú móvil), los números y flechas van en `rosa-300` y el texto
-  secundario en `lavanda-200`.
+- Sobre `morado-900` (menú móvil), los enlaces van en blanco y los números y flechas, en
+  `rosa-300`.
 
 Si necesitas un par nuevo, mide su contraste y pregunta a Mateo antes de usarlo.
 

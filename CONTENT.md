@@ -37,7 +37,8 @@
 - **Botón para cerrar el menú en móvil** (junto al icono ✕, oculto al lector de pantalla):
   - Texto visible: Cerrar
   - Lo que oye el lector de pantalla: "Cerrar menú"
-- **Pie del menú en móvil:** @luvega.daily · 1–31 oct 2026 · comparado con septiembre
+- **Pie del menú en móvil:** ninguno. Mateo lo quitó el 21-11-2026: el menú solo lleva el logo,
+  "Cerrar" y los 5 enlaces.
 - **Enlaces del menú** (en móvil, con su número decorativo "01 /" … "05 /" delante):
   1. Resumen → `#resumen`
   2. Plataformas → `#plataformas`

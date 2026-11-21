@@ -47,7 +47,7 @@ por defecto de Tailwind.
 | `linea` | `#E7E3F3` | Bordes de tarjetas, separadores de tablas, rejilla de KPIs |
 | `lavanda-50` | `#F1EDFC` | Pistas de las barras, chips de actividad, tarjetas de producto, fondo de los filtros |
 | `lavanda-100` | `#EDE7FF` | Enlace activo de la sidebar, etiqueta "Superada" |
-| `lavanda-200` | `#D9D0FB` | Texto secundario dentro del menú móvil |
+| `lavanda-200` | `#D9D0FB` | Sin uso desde el 21-11-2026 (era el periodo del pie del menú móvil, que se quitó). Se mantiene en el tema |
 | `lavanda-300` | `#B9A6F7` | Etapa "Clics" del embudo |
 | `lavanda-400` | `#CFC2FB` | Borde de la alerta "Pico" |
 | `lavanda-pico` | `#F4F0FF` | Fondo de la alerta "Pico" |
@@ -183,7 +183,8 @@ Igual que en la web de Iron Wolf (web-artist), adaptado a esta paleta:
     en blanco y `text-xl`. Delante de cada uno, su número ("01 /" … "05 /") en Geist Mono
     `rosa-300`; a la derecha, una flecha → `rosa-300`. Números y flechas son decorativos
     (`aria-hidden="true"`).
-  - Abajo del todo, @luvega.daily en blanco y el periodo en Geist Mono `lavanda-200`.
+  - Sin pie: debajo de los enlaces no hay nada más (Mateo quitó @luvega.daily y el periodo el
+    21-11-2026).
   - Mientras está abierto, la página no hace scroll.
 - **Se cierra** con "Cerrar", que te deja donde estabas, o al pulsar una sección, que lleva a
   ella. En `md` y más el panel no existe a la vista: se ve la sidebar.
