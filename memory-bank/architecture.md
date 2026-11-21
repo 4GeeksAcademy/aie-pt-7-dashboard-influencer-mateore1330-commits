@@ -1,7 +1,7 @@
 ---
 name: architecture
 description: Estructura prevista del repositorio y de index.html — landmarks, los 3 bloques con sus tarjetas, anclas y breakpoints
-last_verified: 2026-11-20 (sobre el commit c89abef, cierre de la fase 4)
+last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
 ---
 
 # Arquitectura
@@ -54,8 +54,8 @@ barra fija del móvil no tape el título.
 | Base (< 640 px) | Barra superior fija con "Menú"; una columna; KPIs en 2 columnas (comisiones ocupa 2) |
 | `sm` (≥ 640 px) | `px-6`; tarjetas de producto en 3 columnas |
 | `md` (≥ 768 px) | Sidebar fija `w-56`; desaparecen la barra y el menú; periodo a la derecha |
-| `lg` (≥ 1024 px) | KPIs en 3 columnas (comisiones 2 filas); alertas en 3 columnas |
-| `xl` (≥ 1280 px) | KPIs en una franja de 6 columnas; drivers en 2 columnas; campañas y productos lado a lado |
+| `lg` (≥ 1024 px) | Alertas en 3 columnas; las tablas caben sin scroll (celdas compactas); por debajo, scroll con aviso y degradado |
+| `xl` (≥ 1280 px) | KPIs en 5 columnas iguales; drivers en 2 columnas (producto y engagement ocupan las 2); campañas y productos, una debajo de otra |
 
 ## Piezas sin JavaScript
 

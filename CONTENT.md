@@ -17,6 +17,7 @@
 | Título de la pestaña (`<title>`) | Panel de Lucía Vega · Octubre 2026 |
 | Descripción (`meta description`) | Resultados de octubre 2026 de @luvega.daily: comisiones, ventas, conversión y engagement en Instagram, TikTok y YouTube. |
 | Idioma | Español (`lang="es"`) |
+| Aviso de las tablas que se desplazan (solo por debajo de 1024 px) | Desliza para ver toda la tabla → |
 
 **Formato de las cifras:** español. Punto para los miles (`1.180.000`), coma para los decimales
 (`1,61 %`), espacio antes de `%` y de `€`. Los ROI se escriben `2,48×`.
@@ -36,7 +37,8 @@
 - **Botón para cerrar el menú en móvil** (junto al icono ✕, oculto al lector de pantalla):
   - Texto visible: Cerrar
   - Lo que oye el lector de pantalla: "Cerrar menú"
-- **Pie del menú en móvil:** @luvega.daily · 1–31 oct 2026 · comparado con septiembre
+- **Pie del menú en móvil:** ninguno. Mateo lo quitó el 21-11-2026: el menú solo lleva el logo,
+  "Cerrar" y los 5 enlaces.
 - **Enlaces del menú** (en móvil, con su número decorativo "01 /" … "05 /" delante):
   1. Resumen → `#resumen`
   2. Plataformas → `#plataformas`
