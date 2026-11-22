@@ -97,6 +97,13 @@
 | YouTube | 937,50 € | 500 € | 1,88× |
 | **Total** | **3.840 €** | **1.550 €** | **2,48×** |
 
+Textos de la tarjeta (añadidos el 22-11-2026, a petición de Mateo, tras la revisión de la fase 5):
+
+- **Cabecera de la columna del gráfico** (oculta; solo la lee el lector de pantalla): Comisiones · ROI
+- **Cifra de cada barra:** la comisión y, debajo, "ROI" con su valor (por ejemplo, 1.779 € y ROI 2,97×)
+- **Pie:** Costes: Instagram 600 € · TikTok 450 € · YouTube 500 € · Total 1.550 €
+- **Línea del total:** Total: 3.840 € · ROI 2,48×
+
 ### 3.3 Rendimiento por producto
 
 - **Título:** Rendimiento por producto
