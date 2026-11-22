@@ -65,5 +65,4 @@ git config core.hooksPath .githooks   # activa el hook de gitleaks (no viaja con
 python3 -m http.server 8080 --bind 127.0.0.1   # vista previa en http://127.0.0.1:8080 (en Brave)
 ```
 
-Hace falta conexión a internet: Tailwind, Charts.css y las fuentes se cargan por CDN. El
-`server.py` de la plantilla también sirve la web, pero necesita Flask (`pip3 install flask`).
+Hace falta conexión a internet: Tailwind, Charts.css y las fuentes se cargan por CDN.

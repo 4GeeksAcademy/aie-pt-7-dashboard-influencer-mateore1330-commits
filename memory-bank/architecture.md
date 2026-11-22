@@ -23,7 +23,7 @@ last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
 ├── .githooks/pre-commit        ← gitleaks
 ├── .gitignore
 ├── README.md                   ← de la plantilla; se sustituye en la fase 5 (decisión abierta)
-└── server.py, learn.json, .vscode/, README.es.md, README.cn.md   ← plantilla de 4Geeks
+└── learn.json, .vscode/            ← plantilla de 4Geeks (server.py y sus README, borrados en la fase 5)
 ```
 
 No hay archivos `.css` ni `.js` propios (regla [HT-01](../.agents/rules/html.md)).

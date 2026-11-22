@@ -64,8 +64,8 @@ Si algo no está en estos documentos, **se pregunta a Mateo**. No se inventa.
   - **La configuración del tema** va en un único `<style type="text/tailwindcss">` que solo
     contiene `@theme` (`DESIGN.md` §9).
 - **Vista previa en local:** `python3 -m http.server 8080 --bind 127.0.0.1` en la raíz y abrir
-  `http://127.0.0.1:8080` en Brave, el navegador de Mateo. El `server.py` de la plantilla
-  también vale, pero necesita Flask. Hace falta conexión a internet, porque Tailwind, Charts.css
+  `http://127.0.0.1:8080` en Brave, el navegador de Mateo. (El `server.py` de la plantilla se
+  borró en la fase 5.) Hace falta conexión a internet, porque Tailwind, Charts.css
   y las fuentes se cargan por CDN.
 - **Pruebas en el navegador:** con la skill `rx-test-web` (Playwright), con capturas a 375,
   768, 1024 y 1440 px.

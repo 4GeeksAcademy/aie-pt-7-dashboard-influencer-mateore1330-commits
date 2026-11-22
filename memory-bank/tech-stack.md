@@ -33,7 +33,8 @@ red local (lo señaló la revisión de la fase 5).
 Con Playwright, para ver un cambio hay que **recargar de verdad** (`?v=N` en la URL): navegar
 solo a un ancla (`#campanas`) no recarga la página.
 
-El `server.py` de la plantilla también vale, pero necesita Flask (`pip3 install flask`).
+El `server.py` de la plantilla (Flask) se borró en la fase 5, por decisión de Mateo: no se usaba y
+arrancaba un depurador (`debug=True`) abierto a toda la red local.
 
 ## Herramientas
 
