@@ -132,8 +132,7 @@ Tailwind, nunca tamaños en píxeles"). Criterio 4 de `PLAN.md` §5 ("mobile-fir
 ("Breakpoints `sm`, `md`, `lg` y `xl` en uso"). `BRIEFING.md`: Lucía lo mira "sobre todo en el
 móvil".
 
-**✅ Haz:** la sidebar con `hidden md:flex md:w-56`, y los KPIs con `grid-cols-2 lg:grid-cols-3
-xl:grid-cols-6`.
+**✅ Haz:** la sidebar con `hidden md:flex md:w-56`, y los KPIs con `grid-cols-2 xl:grid-cols-5`.
 
 **❌ Evita:** `flex max-md:hidden`, `w-[224px]` o `text-[13px]`.
 
@@ -164,14 +163,17 @@ coincide con el número de tarjetas.
 ## TW-07 · Nunca hay scroll horizontal
 
 **Regla:** La página no se desplaza en horizontal en ningún ancho. Cada tabla va dentro de una
-caja `overflow-x-auto` (con la tabla en `min-w-*` si lo necesita) y se desplaza **dentro** de su
-tarjeta. Los elementos de rejilla y flex que contienen tablas o textos largos llevan `min-w-0`.
+caja `overflow-x-auto` y se desplaza **dentro** de su tarjeta. Los elementos de rejilla y flex
+que contienen tablas o textos largos llevan `min-w-0`. Por debajo de `lg`, todas las tablas
+llevan `min-w-3xl lg:min-w-0` y, encima, el aviso "Desliza para ver toda la tabla →" y un
+degradado en el borde derecho (`lg:hidden`, `aria-hidden="true"`). Desde `lg` caben todas, sin
+scroll (`DESIGN.md` §5).
 
 **Por qué:** `DESIGN.md` §5 ("Nunca hay scroll horizontal de la página: las tablas van dentro de
 una caja `overflow-x-auto` … Los elementos de rejilla y flex que contienen tablas llevan
 `min-w-0`") y criterio 4 de `PLAN.md` §5 ("`scrollWidth` igual a `clientWidth`").
 
-**✅ Haz:** `<div class="overflow-x-auto"><table class="min-w-2xl …">` dentro de un `<article
+**✅ Haz:** `<div class="overflow-x-auto"><table class="w-full min-w-3xl lg:min-w-0 …">` dentro de un `<article
 class="… min-w-0">`.
 
 **❌ Evita:** dejar la tabla de plataformas (10 columnas) suelta en una tarjeta de la rejilla.
