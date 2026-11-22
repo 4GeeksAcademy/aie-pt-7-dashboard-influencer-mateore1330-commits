@@ -23,11 +23,12 @@ CDN.
 ## Vista previa en local
 
 ```bash
-python3 -m http.server 8000     # en la raíz; abrir http://localhost:8000
+python3 -m http.server 8080 --bind 127.0.0.1   # en la raíz; abrir http://127.0.0.1:8080
 ```
 
-Se abre en **Brave**, el navegador de Mateo. En su equipo el puerto 8000 lo usa Docker, así que
-se usa otro: `python3 -m http.server 8080 --bind 127.0.0.1`.
+Se abre en **Brave**, el navegador de Mateo. Se usa el puerto 8080 porque en su equipo el 8000 lo
+usa Docker, y `--bind 127.0.0.1` para que el servidor solo responda en su equipo y no en toda la
+red local (lo señaló la revisión de la fase 5).
 
 Con Playwright, para ver un cambio hay que **recargar de verdad** (`?v=N` en la URL): navegar
 solo a un ancla (`#campanas`) no recarga la página.

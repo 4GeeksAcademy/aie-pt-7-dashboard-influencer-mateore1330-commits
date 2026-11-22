@@ -64,9 +64,13 @@ fase 5, prueba con VoiceOver del menú (`plans/phase-5-verification.md` paso 2).
   tiene foco visible: `focus-visible:outline-2 focus-visible:outline-morado-500
   focus-visible:outline-offset-2`. Sobre el panel `morado-900`, el contorno es blanco. En los
   filtros, el foco del radio se ve en su `<label>` (`has-focus-visible:outline-*`).
-- Las cajas `overflow-x-auto` de las tablas también reciben el foco (Chrome hace enfocables las
-  zonas con scroll, y así se pueden mover con el teclado): llevan el mismo contorno morado, con
-  `focus-visible:-outline-offset-2` para que no lo recorte la tarjeta.
+- Las cajas `overflow-x-auto` de las tablas llevan `role="region"`, `aria-labelledby` (el `h3` de
+  su tarjeta) y `tabindex="0"`. Así se pueden desplazar con el teclado en todos los navegadores
+  (solo Chrome las hace enfocables solo; axe lo marca como fallo grave,
+  `scrollable-region-focusable`) y el lector las anuncia con nombre. Llevan el mismo contorno
+  morado, con `focus-visible:-outline-offset-2` para que no lo recorte la tarjeta. Desde `lg`,
+  donde las tablas caben, siguen siendo una parada del tabulador: coste aceptado, porque quitar
+  el `tabindex` por ancho exigiría JavaScript.
 - Nunca se quita el contorno (`outline-none`) sin poner otro foco visible.
 
 **Por qué:** `DESIGN.md` §10 ("Foco visible en todos los enlaces y filtros (`focus-visible:…`)"),
@@ -109,8 +113,8 @@ navegación, botón y `<label>` de filtro.
 - En `md` y más, el panel nunca se ve: está dentro del `<header id="cabecera">`, que lleva
   `md:hidden`. No hace falta `md:target:hidden`.
 - Mientras está abierto, lo que queda detrás (enlace "Saltar al contenido", logo y "Menú" de la
-  barra, `<main>` y `<footer>`) lleva `[body:has(#menu:target)_&]:invisible`; en `<main>` y
-  `<footer>`, además, `md:[body:has(#menu:target)_&]:visible`. Así el tabulador y el lector de
+  barra, `<main>` y `<footer>`) lleva `[body:has(#menu:target)_&]:invisible`; en "Saltar al
+  contenido", `<main>` y `<footer>`, además, `md:[body:has(#menu:target)_&]:visible`. Así el tabulador y el lector de
   pantalla no salen del panel.
 
 Se **acepta** lo que se pierde: el lector oye "enlace" en vez de "botón, expandido"; Esc no

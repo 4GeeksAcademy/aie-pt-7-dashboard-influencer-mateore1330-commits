@@ -36,7 +36,7 @@ No hay archivos `.css` ni `.js` propios (regla [HT-01](../.agents/rules/html.md)
 | 1 | Saltar al contenido | `<a href="#contenido">`, `sr-only` hasta recibir el foco | Todos |
 | 2 | Sidebar | `<aside>` con logo "LV", nombre, @usuario y `<nav aria-label="Secciones del panel">` | ≥ `md` |
 | 3 | Barra fija del móvil | `<header id="cabecera">` con logo y enlace "Menú" → `#menu` | < `md` |
-| 3a | Panel del menú | `<div id="menu">` (`hidden target:flex`), con "Cerrar" → `#cabecera`, `<nav>` con 5 enlaces y pie | < `md`, al abrirlo |
+| 3a | Panel del menú | `<div id="menu">` (`hidden target:flex`), con "Cerrar" → `#cabecera`, `<nav>` con 5 enlaces (sin pie desde el 21-11-2026) | < `md`, al abrirlo |
 | 4 | `main` | `<main id="contenido">` | Todos |
 | 4a | Cabecera del panel | `h1` "Hola, Lucía", subtítulo y periodo | Todos |
 | 4b | Bloque 1 · Resumen | `<section id="resumen">`: 5 KPIs (`<article>`) | Todos |
