@@ -1,7 +1,7 @@
 ---
 name: product-overview
 description: Qué es el ejercicio, para quién es el panel, qué se entrega, con qué restricciones, cómo se evalúa y qué decide cada documento
-last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
+last_verified: 2026-11-22 (sobre el commit 7cca890, cierre de la fase 5)
 ---
 
 # Descripción del producto
@@ -13,7 +13,7 @@ Ejercicio del bootcamp 4Geeks (AI Engineering PT 7): **"Un dashboard sencillo en
 influencer, que junta sus resultados de Instagram, TikTok y YouTube en tres bloques: **KPIs**,
 **drivers** (qué explica el resultado) y **detalle operativo**. El repositorio parte de la
 plantilla `html-hello` de 4Geeks (`server.py`, `learn.json`, README de la plantilla y
-`.vscode/`). Fuente: [`PLAN.md`](../PLAN.md) §1 y §5.
+`.vscode/`); en la fase 5 se borraron `server.py` y los README de la plantilla. Fuente: [`PLAN.md`](../PLAN.md) §1 y §5.
 
 ### Restricción bloqueante
 

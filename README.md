@@ -1,41 +1,74 @@
-# HTML Hello
+# Dashboard de Lucía Vega
 
-The most basic boilerplate for any 4Geeks Academy student, start your very first website from scratch.
+Panel de resultados de octubre de 2026 de **Lucía Vega (@luvega.daily)**, una creadora de
+contenido de lifestyle y bienestar **ficticia**. Junta sus datos de Instagram, TikTok y YouTube en
+una sola página con tres bloques: **KPIs**, **drivers** (qué explica el resultado) y **detalle
+operativo**. Todas las cifras son datos de ejemplo.
 
-> There is a video tutorial on [how to use this template to create your very first website here](https://youtu.be/dfbDCMu_p-0).
+Ejercicio de 4Geeks Academy: **"Un dashboard sencillo en Tailwind CSS"**.
 
-## What to do next?
+## Cómo verlo
 
-Create an `index.html` file with the [basic HTML structure](http://4geeks.com/lesson/what-is-html-learn-html#page-structure) and see it live by running a web-server using the following command:
+No hace falta instalar nada ni compilar. En la raíz del repositorio:
 
 ```bash
-$ pip3 install flask && python3 server.py
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-- You can create as many HTML files as you want.
-- You can also create CSS files and import them into your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+Abre http://127.0.0.1:8080. Hace falta conexión a internet, porque Tailwind CSS, Charts.css y las
+fuentes se cargan por CDN.
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
+Para ver el diseño responsive, estrecha la ventana. Por debajo de 768 px aparecen la barra
+superior y el menú hamburguesa.
+
+## Stack
+
+| Pieza | Para qué |
+|---|---|
+| HTML5 | Un solo archivo, [`index.html`](index.html), semántico y en español |
+| [Tailwind CSS v4](https://tailwindcss.com/) por CDN (`@tailwindcss/browser@4`) | Todo el estilo, solo con clases utility. El tema (colores y fuentes) va en un bloque `@theme` |
+| [Charts.css](https://chartscss.org/) 1.2.0 por CDN | Los 3 gráficos, que son tablas HTML. Es la única excepción a "solo Tailwind" que permite el enunciado |
+| Google Fonts | Geist y Geist Mono |
+
+No hay CSS propio, ni atributos `style=""`, ni JavaScript propio, ni frameworks. El menú
+hamburguesa funciona con `:target`, y los filtros de los rankings, con radios y las variantes
+`has-checked:` y `group-has-[…]:` de Tailwind.
+
+## Cómo cumple los criterios de evaluación
+
+| Criterio | Cómo se cumple |
+|---|---|
+| **HTML semántico** | Enlace "Saltar al contenido", `aside` con `nav`, `header`, `main` con tres `section` (cada una con `aria-labelledby`), `article` por tarjeta y `footer`. Un `h1`, un `h2` por bloque y un `h3` por tarjeta, sin saltos. Las 7 tablas (incluidos los gráficos) tienen `caption` y `th` con `scope` |
+| **Tailwind CSS** | Solo clases utility, sin CSS propio. Diseño mobile-first con los breakpoints `sm`, `md`, `lg`, `xl` y `2xl`, y maquetación con flex y grid |
+| **Layout y componentes** | Los 3 bloques están separados: 5 KPIs, 5 drivers (embudo, plataformas, productos, engagement y actividad) y el detalle (alertas, 3 tablas y rankings con 4 filtros). Las tarjetas comparten la misma base de clases |
+| **Diseño responsivo** | Funciona en móvil, tablet y escritorio sin scroll horizontal. En móvil hay barra superior y menú hamburguesa; desde 768 px, una barra lateral. Desde 1024 px las tablas caben enteras; por debajo, se desplazan dentro de su tarjeta y lo avisan |
+
+Las comprobaciones y sus resultados están en [`verification.md`](verification.md).
+
+### Sobre "el CSS con los estilos y las media queries"
+
+El enunciado pide "solo Tailwind, sin CSS propio", pero en la entrega menciona "el CSS con los
+estilos y las media queries". En este proyecto **no hay archivo CSS**: los estilos son las clases
+de Tailwind y **las media queries son sus breakpoints** (`sm:`, `md:`, `lg:`, `xl:`), que Tailwind
+convierte en media queries. Es la forma de cumplir las dos cosas a la vez.
+
+## Estructura
+
+```text
+index.html             ← el dashboard
+verification.md        ← comprobaciones de la entrega
+BRIEFING.md            ← quién es la clienta y qué pide
+CONTENT.md             ← todos los textos y las cifras
+DESIGN.md              ← colores, tipografía, estructura y componentes
+PLAN.md, plans/        ← plan de trabajo por fases
+design/                ← maqueta aprobada y capturas de cada fase
+AGENTS.md, .agents/, memory-bank/   ← reglas y contexto para agentes de IA
 ```
 
-- If you want to use Tailwind CSS, add it optionally via the official Tailwind CSS v4 CDN inside the same `<head>`:
+## Para trabajar en el repositorio
 
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
+Tras clonarlo, activa el hook que impide subir secretos (usa [gitleaks](https://github.com/gitleaks/gitleaks)):
+
+```bash
+git config core.hooksPath .githooks
 ```
-
-### Contributors
-
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/html-hello/graphs/contributors).
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).

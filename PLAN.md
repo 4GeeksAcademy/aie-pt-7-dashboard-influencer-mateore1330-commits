@@ -63,9 +63,9 @@ Si algo no está en estos documentos, **se pregunta a Mateo**. No se inventa.
     (`https://cdn.jsdelivr.net/npm/charts.css@1.2.0/dist/charts.min.css`) para los gráficos.
   - **La configuración del tema** va en un único `<style type="text/tailwindcss">` que solo
     contiene `@theme` (`DESIGN.md` §9).
-- **Vista previa en local:** `python3 -m http.server 8000` en la raíz y abrir
-  `http://localhost:8000` en Brave, el navegador de Mateo. El `server.py` de la plantilla
-  también vale, pero necesita Flask. Hace falta conexión a internet, porque Tailwind, Charts.css
+- **Vista previa en local:** `python3 -m http.server 8080 --bind 127.0.0.1` en la raíz y abrir
+  `http://127.0.0.1:8080` en Brave, el navegador de Mateo. (El `server.py` de la plantilla se
+  borró en la fase 5.) Hace falta conexión a internet, porque Tailwind, Charts.css
   y las fuentes se cargan por CDN.
 - **Pruebas en el navegador:** con la skill `rx-test-web` (Playwright), con capturas a 375,
   768, 1024 y 1440 px.
@@ -80,8 +80,8 @@ Si algo no está en estos documentos, **se pregunta a Mateo**. No se inventa.
 | 1 | [`plans/phase-1-agent-harness.md`](plans/phase-1-agent-harness.md) | `docs/phase-1-agent-harness` | `AGENTS.md`, `CLAUDE.md`, reglas, memory bank y skill | Hecha |
 | 2 | [`plans/phase-2-html.md`](plans/phase-2-html.md) | `feat/phase-2-html` | `index.html` semántico completo, con todos los textos, tablas y gráficos | Hecha |
 | 3 | [`plans/phase-3-tailwind.md`](plans/phase-3-tailwind.md) | `feat/phase-3-tailwind` | Todo el estilo con Tailwind, mobile-first, con sidebar desde `md` | Hecha |
-| 4 | [`plans/phase-4-menu-filters.md`](plans/phase-4-menu-filters.md) | `feat/phase-4-menu-filters` | Menú hamburguesa con `:target`, filtros de los rankings y foco visible | En revisión |
-| 5 | [`plans/phase-5-verification.md`](plans/phase-5-verification.md) | `chore/phase-5-verification` | Verificación completa, `verification.md` y README de entrega | Pendiente |
+| 4 | [`plans/phase-4-menu-filters.md`](plans/phase-4-menu-filters.md) | `feat/phase-4-menu-filters` | Menú hamburguesa con `:target`, filtros de los rankings y foco visible | Hecha |
+| 5 | [`plans/phase-5-verification.md`](plans/phase-5-verification.md) | `chore/phase-5-verification` | Verificación completa, `verification.md` y README de entrega | En revisión |
 
 Cada fase pasa a **En revisión** en su propia rama, antes de pedir la revisión. Pasa a **Hecha**
 en el PR de la fase siguiente, una vez fusionada. Lo que decide si una fase está terminada es la

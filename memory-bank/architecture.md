@@ -1,14 +1,14 @@
 ---
 name: architecture
 description: Estructura prevista del repositorio y de index.html — landmarks, los 3 bloques con sus tarjetas, anclas y breakpoints
-last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
+last_verified: 2026-11-22 (sobre el commit 7cca890, cierre de la fase 5)
 ---
 
 # Arquitectura
 
 > Describe la estructura de `PLAN.md` y `DESIGN.md` §4–5. A 20-11-2026 `index.html` tiene toda la
-> estructura y el contenido (fase 2), todo el estilo (fase 3) y el menú, los filtros y el foco
-> (fase 4). Ver [`current-state.md`](current-state.md).
+> estructura y el contenido (fase 2), todo el estilo (fase 3), el menú, los filtros y el foco
+> (fase 4) y está verificado (fase 5). Ver [`current-state.md`](current-state.md).
 
 ## Estructura de archivos
 
@@ -22,8 +22,8 @@ last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
 ├── AGENTS.md, CLAUDE.md, .agents/ (rules, skills), memory-bank/
 ├── .githooks/pre-commit        ← gitleaks
 ├── .gitignore
-├── README.md                   ← de la plantilla; se sustituye en la fase 5 (decisión abierta)
-└── server.py, learn.json, .vscode/, README.es.md, README.cn.md   ← plantilla de 4Geeks
+├── README.md                   ← README de entrega, en español (fase 5)
+└── learn.json, .vscode/            ← plantilla de 4Geeks (server.py y sus README, borrados en la fase 5)
 ```
 
 No hay archivos `.css` ni `.js` propios (regla [HT-01](../.agents/rules/html.md)).
@@ -36,7 +36,7 @@ No hay archivos `.css` ni `.js` propios (regla [HT-01](../.agents/rules/html.md)
 | 1 | Saltar al contenido | `<a href="#contenido">`, `sr-only` hasta recibir el foco | Todos |
 | 2 | Sidebar | `<aside>` con logo "LV", nombre, @usuario y `<nav aria-label="Secciones del panel">` | ≥ `md` |
 | 3 | Barra fija del móvil | `<header id="cabecera">` con logo y enlace "Menú" → `#menu` | < `md` |
-| 3a | Panel del menú | `<div id="menu">` (`hidden target:flex`), con "Cerrar" → `#cabecera`, `<nav>` con 5 enlaces y pie | < `md`, al abrirlo |
+| 3a | Panel del menú | `<div id="menu">` (`hidden target:flex`), con "Cerrar" → `#cabecera`, `<nav>` con 5 enlaces (sin pie desde el 21-11-2026) | < `md`, al abrirlo |
 | 4 | `main` | `<main id="contenido">` | Todos |
 | 4a | Cabecera del panel | `h1` "Hola, Lucía", subtítulo y periodo | Todos |
 | 4b | Bloque 1 · Resumen | `<section id="resumen">`: 5 KPIs (`<article>`) | Todos |
