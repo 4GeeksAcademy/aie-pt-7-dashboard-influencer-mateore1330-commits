@@ -1,7 +1,7 @@
 ---
 name: product-overview
 description: Qué es el ejercicio, para quién es el panel, qué se entrega, con qué restricciones, cómo se evalúa y qué decide cada documento
-last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
+last_verified: 2026-11-22 (sobre el commit 7cca890, cierre de la fase 5)
 ---
 
 # Descripción del producto

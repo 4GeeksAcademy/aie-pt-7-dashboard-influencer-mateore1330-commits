@@ -1,14 +1,14 @@
 ---
 name: architecture
 description: Estructura prevista del repositorio y de index.html — landmarks, los 3 bloques con sus tarjetas, anclas y breakpoints
-last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
+last_verified: 2026-11-22 (sobre el commit 7cca890, cierre de la fase 5)
 ---
 
 # Arquitectura
 
 > Describe la estructura de `PLAN.md` y `DESIGN.md` §4–5. A 20-11-2026 `index.html` tiene toda la
-> estructura y el contenido (fase 2), todo el estilo (fase 3) y el menú, los filtros y el foco
-> (fase 4). Ver [`current-state.md`](current-state.md).
+> estructura y el contenido (fase 2), todo el estilo (fase 3), el menú, los filtros y el foco
+> (fase 4) y está verificado (fase 5). Ver [`current-state.md`](current-state.md).
 
 ## Estructura de archivos
 
@@ -22,7 +22,7 @@ last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
 ├── AGENTS.md, CLAUDE.md, .agents/ (rules, skills), memory-bank/
 ├── .githooks/pre-commit        ← gitleaks
 ├── .gitignore
-├── README.md                   ← de la plantilla; se sustituye en la fase 5 (decisión abierta)
+├── README.md                   ← README de entrega, en español (fase 5)
 └── learn.json, .vscode/            ← plantilla de 4Geeks (server.py y sus README, borrados en la fase 5)
 ```
 

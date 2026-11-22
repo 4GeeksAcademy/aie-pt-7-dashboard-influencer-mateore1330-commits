@@ -1,7 +1,7 @@
 ---
 name: progress
 description: Registro por fase — qué se hizo, decisiones, problemas y cómo se verificó
-last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
+last_verified: 2026-11-22 (sobre el commit 7cca890, cierre de la fase 5)
 ---
 
 # Progreso
@@ -147,7 +147,7 @@ producto. El panel `#menu` queda con `hidden` y las 4 listas de los rankings se 
   0 `text-rosa-500`, 0 sintaxis de v3. Breakpoints en uso: `sm` (19), `md` (31), `lg` (4),
   `xl` (10). Las 8 tarjetas comparten la base de TW-06.
 
-## Fase 4 — Menú hamburguesa, filtros y foco (en revisión)
+## Fase 4 — Menú hamburguesa, filtros y foco (PR #5 y PR #6, fusionados el 20 y el 22-11-2026)
 
 **Qué se hizo:** las piezas interactivas, sin JavaScript, en 3 commits:
 
@@ -230,4 +230,49 @@ ninguna tabla cortada. Capturas `pagina-*.png` en `design/screenshots/fase-4/`.
 **Pie del menú quitado (21-11-2026):** Mateo pidió quitar el pie del menú móvil (@luvega.daily y
 el periodo). Se borró el `<p>` de `index.html` y se actualizaron `CONTENT.md` §1, `DESIGN.md` §2 y
 §7 y A11Y-01. `lavanda-200` queda en el tema, sin uso.
+
+**PR #6:** el PR #5 se fusionó antes de que se subieran los 4 commits de los ajustes (estaban
+solo en local mientras Mateo los revisaba en Brave). Se llevaron a la rama `fix/phase-4-layout`,
+junto con el pie del menú quitado, y se fusionaron en el PR #6. Desde entonces, los cambios se
+suben antes de pedir revisión.
+
+## Fase 5 — Verificación y entrega (en revisión)
+
+**Qué se hizo:**
+
+- Las 10 comprobaciones del plan, todas en ✅. El detalle está en
+  [`verification.md`](../verification.md).
+- El README de entrega.
+- Las capturas finales en `design/screenshots/fase-5/`.
+
+**Problemas encontrados y corregidos:**
+
+- **axe-core (`scrollable-region-focusable`, grave):** las cajas con scroll de las tablas no
+  eran enfocables en Safari ni en Firefox. Llevan `role="region"`, `aria-labelledby` y
+  `tabindex="0"` (`7293c1d`).
+- **Revisión de Claudia (`rx-review`):** nada bloqueante ni importante. Cuatro hallazgos menores,
+  todos resueltos:
+  - "Saltar al contenido" quedaba invisible en escritorio con `#menu` en la dirección (`f5e5095`).
+  - Las reglas A11Y-03 y A11Y-05 y `architecture.md` estaban desfasadas (`baa4c41`).
+  - Tres textos de la tarjeta de plataformas no estaban literales en `CONTENT.md`; se añadieron
+    (`d6521bc`, decisión de Mateo).
+  - La vista previa respondía en toda la red local. Ahora usa `--bind 127.0.0.1`, y `server.py`,
+    con `debug=True`, se borró (`586580d`, decisión de Mateo).
+
+**Decisiones de Mateo:**
+
+- README propio en español; se borran `README.es.md` y `README.cn.md`.
+- No se publica en GitHub Pages.
+- Lighthouse sí, VoiceOver no.
+- Añadir los textos compuestos a `CONTENT.md`.
+- Borrar `server.py`.
+
+**Verificación:**
+
+- Validador W3C: solo los 2 errores aceptados del bloque `@theme`; sin el bloque, 0 mensajes.
+- Lighthouse (Mateo, Brave, móvil): 100 en todas las categorías analizadas.
+- axe-core 4.10 a 375 y 1440 px, con el menú abierto y los filtros cambiados: 0 problemas.
+- Playwright: el menú, los filtros, el teclado, las zonas táctiles y el zoom al 200 % se
+  comprueban sin fallos. No hay scroll horizontal en ningún ancho.
+- 235 textos comparados con `CONTENT.md`.
 

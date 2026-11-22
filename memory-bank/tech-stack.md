@@ -1,7 +1,7 @@
 ---
 name: tech-stack
 description: Tecnologías del dashboard (HTML, Tailwind v4 por CDN, Charts.css, Geist), cómo previsualizarlo y herramientas de trabajo y validación
-last_verified: 2026-11-20 (sobre el commit 5bc6e25, ajustes de la fase 4)
+last_verified: 2026-11-22 (sobre el commit 7cca890, cierre de la fase 5)
 ---
 
 # Stack tecnológico
